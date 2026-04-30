@@ -2,86 +2,86 @@
 
 # 🎬 Enegal Marketplace
 
-### Claude Code'un en hızlı Lottie animasyon entegrasyonu
+### The fastest way to ship Lottie animations from Claude Code
 
-**Tek komutla** ücretsiz Lottie animasyonlarını React, React Native, Flutter veya Vanilla projene göm.
-Arama, indirme, framework-spesifik kod üretimi, canlı preview — hepsi Claude'un içinden.
+**Two commands** to drop free Lottie animations into React, React Native, Flutter, or Vanilla projects.
+Search, fetch, framework-correct code, live preview — all from inside Claude.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Plugin-orange)](https://docs.claude.com/claude-code)
 [![Plugin Version](https://img.shields.io/badge/version-1.0.0-green.svg)](.claude-plugin/marketplace.json)
 [![Lottie](https://img.shields.io/badge/Lottie-Free%20Animations-ff0066)](https://lottiefiles.com)
 
-[Kurulum](#-kurulum) • [Neler Yapar](#-neler-yapar) • [Frameworkler](#-desteklenen-frameworkler) • [Katalog](#-katalog) • [Örnekler](#-örnekler) • [SSS](#-sss)
+[Install](#-install) • [What It Does](#-what-it-does) • [Frameworks](#-supported-frameworks) • [Catalog](#-catalog) • [Examples](#-examples) • [FAQ](#-faq)
 
 </div>
 
 ---
 
-## 🚀 Kurulum
+## 🚀 Install
 
-Claude Code'da iki satır yaz, gerisi otomatik:
+Two lines in Claude Code, the rest is automatic:
 
 ```
 /plugin marketplace add enegaltech/lottie-marketplace
 /plugin install lottie-design@enegal-marketplace
 ```
 
-Bitti. Artık Claude'a `"loading animation ekle"` deyip animasyonun projeye düşmesini izle.
+Done. Now say `"add a loading animation"` and watch it land in your project.
 
 ---
 
-## ⚡ Neler Yapar
+## ⚡ What It Does
 
-> Senaryo: Müşterinin React projesinde "checkout sonrası başarı animasyonu" lazım. Eskiden 20 dakika.
+> Scenario: a client's React app needs a "checkout success animation". Used to take 20 minutes.
 
-**Eski yol** ❌
-1. lottiefiles.com'a gir
-2. Arat, ön izle, beğen
-3. JSON indir, projeye taşı
-4. lottie-react paketini ara
-5. Component yaz
-6. Width/height/loop ayarla
-7. Lisans kontrol et
-8. Compile, test et
+**Old way** ❌
+1. Open lottiefiles.com
+2. Search, preview, pick one
+3. Download JSON, move to project
+4. Look up the right `lottie-react` package
+5. Write the component
+6. Tweak width / height / loop
+7. Check the license
+8. Compile and test
 
-**Yeni yol** ✅
-> "checkout success animasyonu ekle"
+**New way** ✅
+> "add a checkout success animation"
 
 Claude:
-- 🔍 Katalogda **"success"** etiketli 3 animasyon önerir
-- 🎯 Sen seçersin, doğru `lottie.host` URL'i çözer
-- 📝 `@lottiefiles/dotlottie-react` snippet'i `src/components/animations/CheckoutSuccess.tsx` altına yazar
-- 📦 Eksik dep varsa `npm i` komutunu söyler (otomatik kurmaz — sen onaylarsın)
-- ⚖️ Lisans yorumu ekler (commercial use OK / attribution needed)
-- 🖼️ İstersen `preview-CheckoutSuccess.html` üretir, browser'da test edersin
+- 🔍 Suggests 3 catalog entries tagged **`success`**
+- 🎯 You pick one — it resolves the direct `lottie.host` URL
+- 📝 Writes a `@lottiefiles/dotlottie-react` component to `src/components/animations/CheckoutSuccess.tsx`
+- 📦 Tells you the missing `npm i` command (does **not** auto-install — your call)
+- ⚖️ Adds a license header comment (commercial OK / attribution required)
+- 🖼️ On request, generates `preview-CheckoutSuccess.html` to test in a browser
 
-**Toplam süre: 30 saniye.**
+**Total time: 30 seconds.**
 
 ---
 
-## 🎨 Neler Animasyon Bulabilirsin
+## 🎨 Animation Categories
 
-| Kategori | Örnekler |
+| Category | Examples |
 |---|---|
 | 🔄 **Loaders** | Spinner, dots, pulse, bouncing ball, circle |
 | ✅ **Success** | Checkmark, checkbox, confetti burst |
 | ❌ **Error** | X icon, alert circle, alert triangle |
 | 📭 **Empty State** | Empty box, info icon, help, search |
-| 🎉 **Onboarding** | Rocket launch, mail, lock, settings, notification, menu, hamburger |
+| 🎉 **Onboarding** | Rocket launch, mail, lock, settings, notification, menu |
 | 💳 **Payment** | Credit card, checkout |
 | 🛒 **E-commerce** | Trash, download, folder, archive, edit, copy |
 | ❤️ **Social** | Heart, like, bookmark, thumb up, star, share, FB/TW/IG/LI/GH/YT logos |
 | 👤 **Character** | Wave/greeting, person animations |
 | 🎵 **Media** | Play/pause, volume, microphone, video |
 
-**48 verified animasyon** + LottieFiles fallback (binlerce). Katalogda yoksa, Claude LottieFiles'tan canlı arar.
+**48 verified entries** + LottieFiles fallback (thousands more). If the catalog misses, Claude searches LottieFiles live.
 
 ---
 
-## 🛠️ Desteklenen Frameworkler
+## 🛠️ Supported Frameworks
 
-Skill her framework için canonical 2026 paketini kullanır. Tek bir kaynak animasyonu 4 farklı şekilde projene uydurur:
+The skill ships canonical 2026 packages for each platform. One source animation, four idiomatic integrations:
 
 ### ⚛️ React
 
@@ -100,7 +100,7 @@ export function CheckoutSuccess() {
   );
 }
 ```
-Paket: `@lottiefiles/dotlottie-react` (WASM, dotLottie native)
+Package: `@lottiefiles/dotlottie-react` (WASM, native dotLottie playback)
 
 ### 📱 React Native
 
@@ -113,7 +113,7 @@ import LottieView from 'lottie-react-native';
   style={{ width: 200, height: 200 }}
 />
 ```
-Paket: `lottie-react-native` v7+ (RN 0.71+, Expo SDK 53+)
+Package: `lottie-react-native` v7+ (RN 0.71+, Expo SDK 53+)
 
 ### 🦋 Flutter
 
@@ -125,7 +125,7 @@ Lottie.network(
   width: 200, height: 200, repeat: true,
 );
 ```
-Paket: `lottie` v3.3+ (pure-Dart, iOS/Android/Web/Desktop)
+Package: `lottie` v3.3+ (pure-Dart, iOS/Android/Web/Desktop)
 
 ### 🌐 Vanilla Web
 
@@ -138,66 +138,66 @@ Paket: `lottie` v3.3+ (pure-Dart, iOS/Android/Web/Desktop)
   style="width:300px;height:300px"
 ></dotlottie-wc>
 ```
-Paket: `@lottiefiles/dotlottie-wc` web component (no build step)
+Package: `@lottiefiles/dotlottie-wc` web component (no build step required)
 
 ---
 
-## 📚 Katalog
+## 📚 Catalog
 
-48 verified entry, **iki lisans havuzu**:
+48 verified entries across **two license pools**:
 
-| Pool | Adet | Lisans | Attribution |
+| Pool | Count | License | Attribution |
 |---|---|---|---|
 | 🟢 **useAnimations** (`ua-*`) | 38 | CC-BY 4.0 | ✅ Required |
 | 🔵 **LottieFiles community** (`lf-*`) | 10 | Lottie Simple License | ⚪ Optional |
 
-Skill her zaman generated kodun başına lisans yorumu yazar. CC-BY entry seçersen ekstra "footer credit" hatırlatması yapar.
+The skill always emits a license header comment in generated code. If you pick a CC-BY entry, it also reminds you to add a visible footer credit.
 
-**Genişletmek mi istiyorsun?** `catalog.json`'a row ekle (schema `SKILL.md`'de) ve PR aç.
-
----
-
-## 💡 Örnekler
-
-### Örnek 1 — React app'e loader
-
-> **Sen:** "react projeme bir loading animasyonu ekle, mavi tonlarda"
-
-Claude katalogdan 3 spinner önerir → seçersin → `src/components/Loader.tsx` yazılır → `npm i @lottiefiles/dotlottie-react` komutu söylenir → preview HTML üretir → browser'da gösterir.
-
-### Örnek 2 — Flutter splash
-
-> **Sen:** "flutter splash screen için rocket lottie"
-
-Claude `lf-onboarding-rocket` çözer → `lib/widgets/splash_animation.dart` yazılır → `pubspec.yaml`'a `lottie: ^3.3.2` eklenmesini söyler.
-
-### Örnek 3 — Vanilla 404 page
-
-> **Sen:** "404 sayfası için empty box animasyonu, sade html"
-
-Claude `lf-empty-box` URL'i + `<dotlottie-wc>` snippet'i `404.html`'e gömer.
-
-### Örnek 4 — Custom URL
-
-> **Sen:** "şu lottiefiles URL'ini RN projeme ekle: https://lottiefiles.com/free-animation/heart-..."
-
-CF blocklarsa "Get URL butonundan paste et" der → URL verince doğrudan component oluşturur.
+**Want to extend the catalog?** Append a row to `catalog.json` (schema documented in `SKILL.md`) and open a PR.
 
 ---
 
-## 🎯 Kullanım Senaryoları
+## 💡 Examples
 
-- 🏗️ **MVP hızlandırma** — saatlerce animasyon arama yerine 30 sn
-- 🎨 **Design system** — markanla uyumlu animasyon havuzu kurma
-- 📲 **Cross-platform** — aynı animasyon, 4 framework, sıfır manuel taşıma
-- 🛒 **E-commerce conversion** — checkout/empty-cart/success animasyonları
-- 🎓 **Onboarding flows** — first-time user experience
-- 🎬 **Marketing landing pages** — hero animasyonu < 1 dakikada
-- 🐛 **Error states** — boring "Something went wrong" ekranları yerine character
+### Example 1 — Loader for a React app
+
+> **You:** "add a loading animation to my React app, blue tones"
+
+Claude suggests 3 spinners from the catalog → you pick one → it writes `src/components/Loader.tsx` → tells you to run `npm i @lottiefiles/dotlottie-react` → optionally generates a preview HTML for browser testing.
+
+### Example 2 — Flutter splash screen
+
+> **You:** "I need a rocket lottie for the Flutter splash screen"
+
+Claude resolves `lf-onboarding-rocket` → writes `lib/widgets/splash_animation.dart` → tells you to add `lottie: ^3.3.2` to `pubspec.yaml`.
+
+### Example 3 — Vanilla 404 page
+
+> **You:** "empty box animation for a 404 page, plain HTML"
+
+Claude embeds `lf-empty-box` URL with a `<dotlottie-wc>` snippet directly into `404.html`.
+
+### Example 4 — Custom URL
+
+> **You:** "add this lottiefiles URL to my RN project: https://lottiefiles.com/free-animation/heart-..."
+
+If Cloudflare blocks auto-resolve, the skill says "paste the URL from the Get URL button" → once you paste, it builds the component immediately.
 
 ---
 
-## 🏗️ Yapı
+## 🎯 Use Cases
+
+- 🏗️ **MVP velocity** — 30 seconds instead of an hour of animation hunting
+- 🎨 **Design systems** — build a brand-aligned animation library
+- 📲 **Cross-platform** — same animation, four frameworks, zero manual porting
+- 🛒 **E-commerce conversion** — checkout / empty-cart / success animations
+- 🎓 **Onboarding flows** — first-time user experience polish
+- 🎬 **Marketing landing pages** — hero animation in under a minute
+- 🐛 **Error states** — replace boring "Something went wrong" screens with character
+
+---
+
+## 🏗️ Structure
 
 ```
 lottie-marketplace/
@@ -205,11 +205,11 @@ lottie-marketplace/
 └── plugins/lottie-design/
     ├── .claude-plugin/plugin.json     # plugin manifest
     └── skills/lottie-design/
-        ├── SKILL.md                   # agent talimatları
-        ├── catalog.json               # 48 verified entry
+        ├── SKILL.md                   # agent instructions
+        ├── catalog.json               # 48 verified entries
         ├── catalog.md                 # human-readable index
-        ├── preview-template.html      # canlı preview base
-        ├── templates/                 # 4 framework template
+        ├── preview-template.html      # live preview base
+        ├── templates/                 # 4 framework templates
         │   ├── react.tsx.template
         │   ├── react-native.tsx.template
         │   ├── flutter.dart.template
@@ -223,74 +223,74 @@ lottie-marketplace/
             ├── react-native.md
             ├── flutter.md
             ├── vanilla.md
-            └── search-strategy.md     # TR→EN keyword map
+            └── search-strategy.md     # search heuristics + i18n keyword map
 ```
 
 ---
 
 ## 🆕 Update
 
-Plugin yeni versiyonu çıkınca:
+When a new plugin version drops:
 
 ```
 /plugin marketplace update enegal-marketplace
 ```
 
-Tek komut, sıfır breaking change endişesi (semver).
+One command, semver-safe.
 
 ---
 
-## ❓ SSS
+## ❓ FAQ
 
-**Q: LottieFiles paid mı? Ücret var mı?**
-A: Hayır. Sadece **free** animasyonlar. Skill premium URL'leri reddeder.
+**Q: Are LottieFiles animations paid?**
+A: No — only **free** animations. The skill rejects premium URLs.
 
-**Q: Cloudflare individual page'leri blokluyor — ne olacak?**
-A: Skill bunu detect eder, sana "Get URL" butonundan paste etmeni söyler. Katalog ve search index zaten çalışıyor — çoğu durumda CF dert değil.
+**Q: Cloudflare blocks individual pages — what happens?**
+A: The skill detects this and asks you to paste the URL from the **Get URL** button. The catalog and search index already work — CF is rarely a blocker.
 
-**Q: Animation custom yapabilir miyim?**
-A: Şu an scope dışı. Skill **embed** odaklı, **author** değil. Custom Lottie için After Effects + Bodymovin lazım.
+**Q: Can I author custom animations?**
+A: Out of scope. The skill is **embed**-focused, not **author**-focused. For custom Lottie you still need After Effects + Bodymovin.
 
-**Q: Production-ready mi?**
-A: 48 katalog entry'sinin URL'i 200 dönüyor (test edildi). Ama LottieFiles community URL'leri creator silebilir — link rot riski var. CI ile aylık check eklenebilir.
+**Q: Is it production-ready?**
+A: All 48 catalog URLs return 200 (tested). LottieFiles community URLs can rot if creators delete them — a monthly CI link check is on the roadmap.
 
-**Q: Türkçe arama yapabilir miyim?**
-A: Evet. `docs/search-strategy.md` TR→EN map içerir: "yükleniyor", "başarılı", "kalp", "roket"...
+**Q: Can I search in non-English?**
+A: Yes. `docs/search-strategy.md` includes a Turkish→English keyword map (`yükleniyor`, `başarılı`, `kalp`, `roket`...) and the pattern can be extended.
 
-**Q: Başka skill ekleyecek misiniz?**
-A: Yes — bu marketplace genişleyecek. Roadmap aşağıda.
+**Q: Will more skills be added?**
+A: Yes — this marketplace will grow. Roadmap below.
 
 ---
 
 ## 🗺️ Roadmap
 
-- [ ] **catalog v2**: 48 → 200+ entry (otomatik scrape + manuel curation)
+- [ ] **catalog v2**: 48 → 200+ entries (auto-scrape + manual curation)
 - [ ] **CI link checker**: monthly URL health check
-- [ ] **icon-design skill**: Lordicon, useAnimations icon library full coverage
-- [ ] **animation-author skill**: Lottie JSON yazma asistanı (After Effects export pipeline)
+- [ ] **icon-design skill**: full Lordicon + useAnimations icon coverage
+- [ ] **animation-author skill**: Lottie JSON authoring assistant (After Effects export pipeline)
 - [ ] **figma-to-lottie**: Figma vector → Lottie export skill
-- [ ] **preview gif export**: preview.html'i animated gif/mp4'e çevirme
+- [ ] **preview gif export**: convert preview.html into animated GIF / MP4
 
 ---
 
-## 📜 Lisans
+## 📜 License
 
-- Marketplace metadata + skill kodu: **MIT** ([LICENSE](LICENSE))
-- Animasyon referansları upstream lisansını miras alır:
+- Marketplace metadata + skill code: **MIT** ([LICENSE](LICENSE))
+- Animation references inherit upstream licenses:
   - `ua-*` entries → CC-BY 4.0
   - `lf-*` entries → Lottie Simple License
 
 ---
 
-## 🤝 Katkı
+## 🤝 Contributing
 
-PR'lar açık. Yeni katalog entry, framework template, skill — hepsi welcome.
-Issue açmadan büyük değişiklik yapma.
+PRs welcome. New catalog entries, framework templates, or skills — all welcome.
+Open an issue before large changes.
 
 **Maintained by [Enegaltech](https://enegaltech.com)** — `info@enegaltech.com`
 
 <div align="center">
 
-⭐ **Faydalıysa yıldız ver** — marketplace büyüsün diye
+⭐ **Star this repo** — help the marketplace grow
 
 </div>
