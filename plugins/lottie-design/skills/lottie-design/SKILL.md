@@ -153,8 +153,10 @@ Switch to **local mode** if any of these is true (auto-detect, don't ask):
 To switch to local mode:
 
 ```
-node scripts/download-asset.js <jsonUrl> <projectRoot> [framework]
+node scripts/download-asset.js <jsonUrl> <projectRoot> [framework] [--dotlottie]
 ```
+
+Pass `--dotlottie` to also emit a sibling `.lottie` (ZIP-compressed) — typically **50-80% smaller** than the raw JSON, useful for production bundles. Only adds value when the player supports dotLottie (`@lottiefiles/dotlottie-*` packages, the `<dotlottie-wc>` web component, and `lottie-flutter` v3+; **not** `lottie-react-native` v7 which expects `.json`).
 
 The script downloads the asset to the conventional location for the framework:
 - React (Vite/CRA): `src/assets/animations/<name>.json`

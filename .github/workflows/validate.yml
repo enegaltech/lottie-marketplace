@@ -1,0 +1,94 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    # Weekly URL health check, Mondays 06:00 UTC
+    - cron: '0 6 * * 1'
+
+jobs:
+  manifests:
+    name: Manifest + JSON validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate marketplace.json + plugin.json + catalog.json
+        run: |
+          set -e
+          node -e "JSON.parse(require('fs').readFileSync('.claude-plugin/marketplace.json'))"
+          node -e "JSON.parse(require('fs').readFileSync('plugins/lottie-design/.claude-plugin/plugin.json'))"
+          node -e "
+            const c = JSON.parse(require('fs').readFileSync('plugins/lottie-design/skills/lottie-design/catalog.json'));
+            if (!Array.isArray(c)) throw new Error('catalog must be an array');
+            if (c.length < 100) throw new Error('catalog has fewer than 100 entries: ' + c.length);
+            const ids = new Set();
+            for (const e of c) {
+              if (!e.id || !e.title || !e.category || !e.jsonUrl) throw new Error('missing required field on ' + JSON.stringify(e).slice(0,200));
+              if (ids.has(e.id)) throw new Error('duplicate id: ' + e.id);
+              ids.add(e.id);
+              if (!Array.isArray(e.tags)) throw new Error('tags must be an array on ' + e.id);
+              if (!e.license) throw new Error('missing license on ' + e.id);
+            }
+            console.log('catalog valid:', c.length, 'entries,', ids.size, 'unique ids');
+          "
+
+  scripts-smoke:
+    name: Script smoke tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: generate-preview.js produces valid HTML
+        run: |
+          set -e
+          cd /tmp
+          node "$GITHUB_WORKSPACE/plugins/lottie-design/skills/lottie-design/scripts/generate-preview.js" \
+            "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/loading/loading.json" \
+            ci-test --no-open
+          test -f preview-ci-test.html
+          grep -q 'dotlottie-wc' preview-ci-test.html
+          echo "preview generation OK"
+      - name: --gallery mode
+        run: |
+          set -e
+          cd /tmp
+          node "$GITHUB_WORKSPACE/plugins/lottie-design/skills/lottie-design/scripts/generate-preview.js" \
+            --gallery ci-gallery --no-open \
+            '{"id":"a","title":"A","src":"https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/loading/loading.json","color":"#000000","duration":5,"frames":150,"sizeKb":6,"license":"CC-BY-4.0"}' \
+            '{"id":"b","title":"B","src":"https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/loading2/loading2.json","color":"#000000","duration":1.53,"frames":46,"sizeKb":17,"license":"CC-BY-4.0"}'
+          test -f preview-ci-gallery.html
+          grep -q '"A"' preview-ci-gallery.html
+          grep -q '"B"' preview-ci-gallery.html
+          echo "gallery generation OK"
+
+  url-health:
+    name: Catalog URL health check
+    runs-on: ubuntu-latest
+    # Only on schedule + manual; skip on PRs to keep CI fast.
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    steps:
+      - uses: actions/checkout@v4
+      - name: HEAD-check every catalog URL
+        run: |
+          set +e
+          node <<'EOF'
+          const fs = require('fs');
+          const { spawnSync } = require('child_process');
+          const c = JSON.parse(fs.readFileSync('plugins/lottie-design/skills/lottie-design/catalog.json', 'utf8'));
+          const broken = [];
+          for (const e of c) {
+            const r = spawnSync('curl', ['-sL', '-o', '/dev/null', '-w', '%{http_code}', '--max-time', '15', e.jsonUrl], { encoding: 'utf8' });
+            const code = parseInt(r.stdout.trim(), 10);
+            if (code !== 200) broken.push({ id: e.id, code, url: e.jsonUrl });
+          }
+          console.log('checked', c.length, 'urls; broken:', broken.length);
+          if (broken.length) {
+            console.log(JSON.stringify(broken, null, 2));
+            process.exit(1);
+          }
+          EOF

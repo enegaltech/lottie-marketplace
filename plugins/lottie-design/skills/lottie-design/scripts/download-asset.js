@@ -2,10 +2,11 @@
 // download-asset.js — download a Lottie JSON/.lottie to a project's assets dir.
 //
 // Usage:
-//   node download-asset.js <url> <projectRoot> [framework] [name]
+//   node download-asset.js <url> <projectRoot> [framework] [name] [--dotlottie]
 //
-// framework: react | next | rn | flutter | vanilla   (auto-detected if omitted)
-// name:      file basename (default = derived from URL)
+// framework:    react | next | rn | flutter | vanilla   (auto-detected if omitted)
+// name:         file basename (default = derived from URL)
+// --dotlottie:  if input is .json, also emit a sibling .lottie (compressed ZIP), typically 50-80% smaller
 //
 // Output:
 //   - React (Vite/CRA):     <projectRoot>/src/assets/animations/<name>.json
@@ -20,7 +21,10 @@ const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
 
-const [, , url, projectRoot, frameworkArg, nameArg] = process.argv;
+const allArgs = process.argv.slice(2);
+const wantDotLottie = allArgs.includes('--dotlottie');
+const positional = allArgs.filter((a) => !a.startsWith('--'));
+const [url, projectRoot, frameworkArg, nameArg] = positional;
 
 if (!url || !projectRoot) {
   console.error(
@@ -114,12 +118,28 @@ if (framework === 'flutter') {
   }
 }
 
+let dotLottiePath = null;
+if (wantDotLottie && ext === '.json') {
+  const dlAbs = absFile.replace(/\.json$/i, '.lottie');
+  const r2 = spawnSync(
+    'node',
+    [path.join(__dirname, 'to-dotlottie.js'), absFile, dlAbs, '--id', inferredName],
+    { encoding: 'utf8' },
+  );
+  if (r2.status === 0) {
+    dotLottiePath = `${targetDir}/${inferredName}.lottie`.replace(/\\/g, '/');
+  } else {
+    process.stderr.write(`dotLottie conversion failed: ${r2.stderr}\n`);
+  }
+}
+
 console.log(JSON.stringify({
   framework,
   path: relPath,
   abs: absFile,
   sizeKb,
-  importHint: importHintFor(framework, relPath),
+  dotLottiePath,
+  importHint: importHintFor(framework, dotLottiePath || relPath),
 }, null, 2));
 
 function importHintFor(fw, rel) {
