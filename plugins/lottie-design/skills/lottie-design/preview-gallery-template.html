@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Lottie gallery — {{title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js" type="module"></script>
+  <style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: #0b0d10;
+      color: #e6e8eb;
+    }
+    h1 { font-size: 1.1rem; font-weight: 500; margin: 0 0 1.5rem; opacity: 0.85; text-align: center; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      width: min(1100px, 100%);
+    }
+    .card {
+      display: grid;
+      gap: 0.75rem;
+      padding: 1.25rem;
+      border: 1px solid #1f242b;
+      border-radius: 14px;
+      background: #11141a;
+      text-align: center;
+      transition: border-color .15s ease;
+    }
+    .card:hover { border-color: #3a4452; }
+    .card-title { font-size: .9rem; font-weight: 500; opacity: .85; }
+    .card-meta {
+      font-size: .7rem;
+      opacity: .5;
+      display: flex;
+      gap: .5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .swatch {
+      display: inline-block;
+      width: 12px; height: 12px;
+      border-radius: 3px;
+      border: 1px solid rgba(255,255,255,.2);
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+    dotlottie-wc { width: 220px; height: 220px; margin: 0 auto; }
+    .id { font-size: .65rem; opacity: .35; font-family: ui-monospace, monospace; }
+    .controls { display: flex; gap: .35rem; justify-content: center; }
+    button {
+      background: #1f242b;
+      color: #e6e8eb;
+      border: 1px solid #2a313a;
+      padding: .25rem .6rem;
+      border-radius: 4px;
+      font: inherit;
+      font-size: .7rem;
+      cursor: pointer;
+    }
+    button:hover { background: #2a313a; }
+  </style>
+</head>
+<body>
+  <main style="width:100%;">
+    <h1>{{title}}</h1>
+    <div class="grid">
+      {{cards}}
+    </div>
+  </main>
+</body>
+</html>

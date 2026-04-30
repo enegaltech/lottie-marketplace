@@ -86,9 +86,35 @@ Tell the user one line: `Installing @lottiefiles/dotlottie-react…` then run it
 
 ### Step 4 — Present options
 
-Show 2–3 options. **Use AskUserQuestion** when there are clear distinct choices to compare — let the user pick from a UI. Each option label = animation title; description = category + license note. Skip the question and pick the top match if user said "just pick" / "best one" / specific id.
+Show 2–3 options using **AskUserQuestion** with rich preview blocks. Each option must include a `preview` field rendered as a metadata card so the user can compare at a glance. Skip the question and pick the top match if user said "just pick" / "best one" / specific id, or if request is unambiguous (e.g. "default").
 
-If the user request is unambiguous (e.g. "react'ime success checkmark ekle, default") → skip the question, pick top catalog match.
+**Required option shape**:
+
+- `label` — animation title (max 5 words). Add ` (Recommended)` to the first option if you have a clear top pick.
+- `description` — `<category> · <license>` (one line, ≤80 chars).
+- `preview` — multi-line metadata block. Use this exact format:
+
+```
+ID:        <id>
+Color:     <dominantColor> ●
+Duration:  <duration>s · <frames> frames
+Size:      <sizeKb>KB · <w>×<h>
+License:   <license><attribution-flag>
+Author:    <author>
+Source:    <preview-url>
+```
+
+The Color line should include a literal Unicode dot (●) immediately after the hex. If `dominantColor` is null, omit the Color line. Replace `<attribution-flag>` with ` (attribution required)` for CC-BY entries, otherwise empty string.
+
+**Also generate a side-by-side preview gallery** before asking — so the user sees the animations playing while they choose:
+
+```
+node scripts/generate-preview.js --gallery <slug> '<item1-json>' '<item2-json>' '<item3-json>'
+```
+
+Each `<itemN-json>` is a single-line JSON object: `{"id","title","src","color","duration","frames","sizeKb","license"}`. The script writes `preview-<slug>.html` and auto-opens it in the browser. Mention "Bir browser tab'ı açıldı, animasyonları yan yana karşılaştır." in your message before the AskUserQuestion call.
+
+Use **AskUserQuestion** as the primary picker — it handles the "Other" escape hatch automatically.
 
 ### Step 5 — Verify URL reachability
 

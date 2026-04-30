@@ -4,22 +4,128 @@ How the skill picks an animation for a user request.
 
 ## Step 1 — Normalize query
 
-Lowercase, strip punctuation, split into tokens. Detect language: Turkish keywords (`yükleniyor`, `başarılı`, `hata`, `kalp`, `roket`) → translate via this map:
+Lowercase, strip punctuation, split into tokens. Detect language and translate non-English keywords to English search terms via these maps. If a token matches multiple languages, score against the dominant language of the rest of the prompt.
+
+### Turkish (TR)
 
 | TR | EN |
 |---|---|
-| yükleniyor / yüklenme / spinner | loading, spinner |
-| başarılı / tamam / onay | success, check, ok |
-| hata / başarısız | error, fail |
-| boş / yok | empty, no-data |
-| kalp / beğeni | heart, like |
+| yükleniyor / yüklenme / spinner / dönen | loading, spinner |
+| başarılı / tamam / onay / başardı | success, check, ok |
+| hata / başarısız / yanlış | error, fail |
+| uyarı / dikkat | alert, warning |
+| boş / yok / veri yok | empty, no-data |
+| kalp / beğeni / sevgi | heart, like |
+| yıldız / favori | star, favorite |
 | roket / fırlatma | rocket, launch |
-| ödeme / kart | payment, card, credit |
-| sepet | cart, ecommerce |
-| menü | menu, hamburger |
-| kilit / şifre | lock, password |
+| ödeme / kart / fatura | payment, card, credit |
+| sepet / mağaza | cart, ecommerce, store |
+| menü / hamburger | menu, hamburger |
+| kilit / şifre / güvenlik | lock, password, secure |
 | bildirim / zil | notification, bell |
 | sosyal / paylaş | share, social |
+| posta / mail / e-posta | mail, email, envelope |
+| ayarlar / dişli | settings, gear, config |
+| arama / büyüteç | search, magnifier |
+| oynat / duraklat | play, pause |
+| ses / mikrofon | sound, microphone, audio |
+| video / kamera | video, camera |
+| indir / yükle (yüklemek) | download, upload |
+| sil / çöp | delete, trash |
+| selam / merhaba / el sallama | wave, hello, greet |
+| onboarding / başlangıç / karşılama | onboarding, welcome |
+
+### Spanish (ES)
+
+| ES | EN |
+|---|---|
+| cargando / cargador | loading, spinner |
+| éxito / completado / hecho | success, done, complete |
+| error / fallo | error, fail |
+| advertencia / alerta | warning, alert |
+| vacío / sin datos | empty, no-data |
+| corazón / me gusta | heart, like |
+| estrella / favorito | star, favorite |
+| cohete / lanzamiento | rocket, launch |
+| pago / tarjeta | payment, card |
+| carrito / tienda | cart, ecommerce |
+| menú | menu |
+| candado / contraseña | lock, password |
+| notificación / campana | notification, bell |
+| compartir / social | share, social |
+| correo / email | mail, email |
+| ajustes / configuración | settings, config |
+| buscar / búsqueda | search |
+| reproducir / pausa | play, pause |
+
+### German (DE)
+
+| DE | EN |
+|---|---|
+| laden / lädt | loading, spinner |
+| erfolg / erfolgreich / fertig | success, done |
+| fehler / fehlgeschlagen | error, fail |
+| warnung / achtung | warning, alert |
+| leer / keine daten | empty, no-data |
+| herz / gefällt mir | heart, like |
+| stern / favorit | star, favorite |
+| rakete / start | rocket, launch |
+| zahlung / karte | payment, card |
+| warenkorb / einkaufswagen | cart, ecommerce |
+| menü | menu |
+| schloss / passwort | lock, password |
+| benachrichtigung / glocke | notification, bell |
+| teilen / sozial | share, social |
+| post / e-mail | mail, email |
+| einstellungen | settings |
+| suche / suchen | search |
+| abspielen / pause | play, pause |
+
+### French (FR)
+
+| FR | EN |
+|---|---|
+| chargement / chargeur | loading, spinner |
+| succès / réussi / terminé | success, done |
+| erreur / échec | error, fail |
+| avertissement / alerte | warning, alert |
+| vide / pas de données | empty, no-data |
+| cœur / j'aime | heart, like |
+| étoile / favori | star, favorite |
+| fusée / lancement | rocket, launch |
+| paiement / carte | payment, card |
+| panier / boutique | cart, ecommerce |
+| menu | menu |
+| verrou / mot de passe | lock, password |
+| notification / cloche | notification, bell |
+| partager / social | share, social |
+| courrier / email | mail, email |
+| paramètres / réglages | settings |
+| recherche / chercher | search |
+| lire / pause | play, pause |
+
+### Japanese (JA)
+
+| JA | EN |
+|---|---|
+| 読み込み / ローディング / スピナー | loading, spinner |
+| 成功 / 完了 / OK | success, done |
+| エラー / 失敗 | error, fail |
+| 警告 / 注意 | warning, alert |
+| 空 / データなし | empty, no-data |
+| ハート / いいね | heart, like |
+| 星 / お気に入り | star, favorite |
+| ロケット / 発射 | rocket, launch |
+| 支払い / カード | payment, card |
+| カート / ストア | cart, ecommerce |
+| メニュー | menu |
+| 鍵 / パスワード | lock, password |
+| 通知 / ベル | notification, bell |
+| 共有 / ソーシャル | share, social |
+| メール | mail, email |
+| 設定 | settings |
+| 検索 | search |
+| 再生 / 一時停止 | play, pause |
 
 ## Step 2 — Score catalog entries
 

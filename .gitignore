@@ -2,3 +2,5 @@ node_modules/
 .DS_Store
 *.log
 preview-*.html
+!preview-template.html
+!preview-gallery-template.html
