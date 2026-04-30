@@ -31,6 +31,21 @@ Done. Now say `"add a loading animation"` and watch it land in your project.
 
 ---
 
+## ✨ Features at a Glance
+
+- **197-entry catalog** with metadata: `dominantColor`, `duration`, `frames`, `sizeKb`, `dimensions`. No more blind picks.
+- **Semantic ranking** — weighted scoring across intent, color hue, style, and size. Beats keyword overlap.
+- **Multi-language input** — TR / ES / DE / FR / JA keyword + color-name maps. "yükleniyor mavi" works.
+- **Auto dep install** — detects pnpm / yarn / npm / bun and installs the right framework package upfront.
+- **TS/JS auto-detect** — generates `.tsx` if `tsconfig.json` exists, `.jsx` otherwise.
+- **CDN or local mode** — opt-in `download-asset.js` saves to the right convention (Vite/Next/RN/Flutter/Vanilla); Flutter `pubspec.yaml` auto-patched.
+- **Standardized prop** — every component takes `<X size={160} />`. Drop in, swap out.
+- **License-aware** — CC-BY entries get a ready-to-paste attribution string; Lottie Simple License entries skip it.
+- **Preview gallery** — `--gallery` flag renders N animations side-by-side in one HTML, auto-opens in browser.
+- **Background link check** — scheduled remote agent runs monthly, opens a PR with replacements when a URL rots.
+
+---
+
 ## ⚡ What It Does
 
 > Scenario: a client's React app needs a "checkout success animation". Used to take 20 minutes.
@@ -207,24 +222,24 @@ lottie-marketplace/
     ├── .claude-plugin/plugin.json     # plugin manifest
     └── skills/lottie-design/
         ├── SKILL.md                   # agent instructions
-        ├── catalog.json               # 48 verified entries
+        ├── catalog.json               # 197 verified entries (with color/duration/size metadata)
         ├── catalog.md                 # human-readable index
-        ├── preview-template.html      # live preview base
-        ├── templates/                 # 4 framework templates
-        │   ├── react.tsx.template
-        │   ├── react-native.tsx.template
-        │   ├── flutter.dart.template
-        │   └── vanilla.html.template
+        ├── preview-template.html      # single-animation preview
+        ├── preview-gallery-template.html  # side-by-side N-animation gallery
+        ├── templates/                 # 4 framework templates (React/RN/Flutter/Vanilla)
         ├── scripts/
-        │   ├── extract-url.js         # LF page → direct URL
-        │   ├── generate-preview.js    # URL → preview.html
-        │   └── fetch-lottie.sh        # page → downloaded JSON
-        └── docs/                      # framework usage guides
-            ├── react.md
-            ├── react-native.md
-            ├── flutter.md
-            ├── vanilla.md
-            └── search-strategy.md     # search heuristics + i18n keyword map
+        │   ├── extract-url.js         # LottieFiles page → direct URL (CF-aware)
+        │   ├── generate-preview.js    # URL → preview.html, auto-opens browser; --gallery for compare
+        │   ├── download-asset.js      # URL → project's framework-conventional assets dir
+        │   ├── enrich-catalog.js      # backfill color/duration/size metadata
+        │   ├── add-useanimations-batch.js / add-lottiefiles-batch.js
+        │   ├── scrape-candidates.js   # discover bodymovin JSONs from MIT/Apache GitHub repos
+        │   ├── merge-candidates.js    # idempotent fold of candidates → catalog
+        │   ├── build-embeddings.js    # OPTIONAL Voyage AI embeddings precompute
+        │   └── fetch-lottie.sh
+        └── docs/                      # framework usage + search strategy
+            ├── react.md, react-native.md, flutter.md, vanilla.md
+            └── search-strategy.md     # semantic ranking, color name → hex map, i18n (TR/ES/DE/FR/JA)
 ```
 
 ---
@@ -253,10 +268,16 @@ A: The skill detects this and asks you to paste the URL from the **Get URL** but
 A: Out of scope. The skill is **embed**-focused, not **author**-focused. For custom Lottie you still need After Effects + Bodymovin.
 
 **Q: Is it production-ready?**
-A: All 48 catalog URLs return 200 (tested). LottieFiles community URLs can rot if creators delete them — a monthly CI link check is on the roadmap.
+A: All 197 catalog URLs return 200 (tested). LottieFiles community URLs can rot if creators delete them — a monthly background-agent link check is scheduled and opens an auto-PR with replacements.
 
 **Q: Can I search in non-English?**
-A: Yes. `docs/search-strategy.md` includes a Turkish→English keyword map (`yükleniyor`, `başarılı`, `kalp`, `roket`...) and the pattern can be extended.
+A: Yes. The skill ships a TR/ES/DE/FR/JA → EN keyword map (~150 entries) plus a 17-language color-name → hex map. So "yükleniyor mavi" maps to a blue loader, "fusée verte" to a green rocket, etc.
+
+**Q: How does the skill rank options?**
+A: Weighted semantic scoring — intent match 0.5, color match 0.2, style/duration match 0.15, file size 0.15. Optional Voyage AI embeddings (`build-embeddings.js`) for offline cosine-sim ranking on 500+ catalogs.
+
+**Q: Can I bundle the JSON locally instead of using a CDN?**
+A: Yes — the skill auto-detects when to use **local mode** (keywords like "offline", "bundle", or an existing `assets/animations/` dir). Then `download-asset.js` saves the file to the right convention (Vite/Next/RN/Flutter/Vanilla) and the generated component imports it directly. Flutter's `pubspec.yaml` is auto-patched.
 
 **Q: Will more skills be added?**
 A: Yes — this marketplace will grow. Roadmap below.
@@ -265,12 +286,16 @@ A: Yes — this marketplace will grow. Roadmap below.
 
 ## 🗺️ Roadmap
 
-- [ ] **catalog v2**: 48 → 200+ entries (auto-scrape + manual curation)
-- [ ] **CI link checker**: monthly URL health check
-- [ ] **icon-design skill**: full Lordicon + useAnimations icon coverage
-- [ ] **animation-author skill**: Lottie JSON authoring assistant (After Effects export pipeline)
-- [ ] **figma-to-lottie**: Figma vector → Lottie export skill
-- [ ] **preview gif export**: convert preview.html into animated GIF / MP4
+- [x] **catalog v2** — 48 → **197** entries (auto-scrape from MIT/Apache repos + curation)
+- [x] **semantic ranking** — weighted intent / color / style / size scoring
+- [x] **i18n** — TR / ES / DE / FR / JA keyword + color-name maps
+- [x] **local asset mode** — opt-in bundling instead of CDN
+- [x] **preview gallery** — N animations side-by-side in one HTML
+- [x] **monthly background link check** — scheduled remote agent opens PR with replacements
+- [ ] **inline GIF/MP4 preview** — render preview to a still image for in-chat display (puppeteer)
+- [ ] **icon-design skill** — Lordicon + useAnimations icon-only sub-pack
+- [ ] **animation-author skill** — Lottie JSON authoring assistant (After Effects export pipeline)
+- [ ] **figma-to-lottie** — Figma vector → Lottie export skill
 
 ---
 
