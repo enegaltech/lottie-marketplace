@@ -13,8 +13,6 @@ In Claude Code:
 /plugin install lottie-design@enegal-marketplace
 ```
 
-Replace `enegaltech/lottie-marketplace` with the actual GitHub `<owner>/<repo>` path once you push this.
-
 ## Update
 
 ```
