@@ -127,6 +127,40 @@ Lowercase, strip punctuation, split into tokens. Detect language and translate n
 | 検索 | search |
 | 再生 / 一時停止 | play, pause |
 
+## Color name → hex map
+
+If the user mentions a color in any supported language, resolve to a hex (or hue family) and match against each entry's `dominantColor` field. Score by HSL hue distance (±30° = strong, ±60° = weak, else 0).
+
+| Hue family | Names (multi-lingual) | Reference hex |
+|---|---|---|
+| Red | red, kırmızı, rouge, rojo, rot, 赤 | `#E53935` |
+| Pink | pink, pembe, rose, rosa, rosa, ピンク | `#EC407A` |
+| Orange | orange, turuncu, oranje, naranja, オレンジ | `#FB8C00` |
+| Yellow | yellow, sarı, jaune, amarillo, gelb, 黄色 | `#FDD835` |
+| Green | green, yeşil, vert, verde, grün, 緑 | `#43A047` |
+| Mint / teal | mint, teal, turkuaz, turquoise, ターコイズ | `#26A69A` |
+| Cyan | cyan, açık mavi, cyan | `#00BCD4` |
+| Blue | blue, mavi, bleu, azul, blau, 青 | `#1E88E5` |
+| Indigo | indigo, lacivert, indigo | `#3F51B5` |
+| Purple | purple, mor, violet, púrpura, lila, 紫 | `#8E24AA` |
+| Magenta | magenta, fuşya, magenta | `#D81B60` |
+| Brown | brown, kahverengi, marron, café, braun, 茶色 | `#795548` |
+| Black | black, siyah, noir, negro, schwarz, 黒 | `#000000` |
+| White | white, beyaz, blanc, blanco, weiß, 白 | `#FFFFFF` |
+| Gray | gray, grey, gri, gris, grau, グレー | `#9E9E9E` |
+| Gold | gold, altın, doré, dorado, gold, 金 | `#FFD700` |
+| Silver | silver, gümüş, argent, plata, silber, 銀 | `#C0C0C0` |
+
+**Hue family extraction**:
+1. Convert the entry's `dominantColor` hex to HSL: `H ∈ [0,360)`, `S`, `L`.
+2. If `S < 0.1` → entry is grayscale → only matches "white" / "black" / "gray" by `L` (≥0.85 white, ≤0.15 black, else gray).
+3. Otherwise compute hue distance (modular): `min(|H_user − H_entry|, 360 − |H_user − H_entry|)`.
+4. Strong match: ≤30°. Weak: ≤60°. Else: no match.
+
+Score from this stage feeds the 0.2 color weight in Step 3 of the SKILL workflow.
+
+---
+
 ## Step 2 — Score catalog entries
 
 For each entry in `catalog.json`:

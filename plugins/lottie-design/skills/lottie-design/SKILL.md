@@ -76,7 +76,16 @@ Tell the user one line: `Installing @lottiefiles/dotlottie-react…` then run it
 
 **Search order (stop at first good match):**
 
-1. **Catalog first.** Read `catalog.json`. Filter by `tags`, `title`, and `category` against the user's keywords. Score matches by tag overlap. If you find ≥1 strong match, surface up to 3 options.
+1. **Catalog first — semantic ranking.** Read `catalog.json` (140 entries). Use semantic understanding rather than literal tag overlap. For each entry, mentally score relevance to the user's request along four dimensions:
+
+   - **Intent match (weight 0.5)**: does the entry's `title` + `category` + `tags` describe what the user actually wants? Examples: "fintech splash" → onboarding/payment/rocket category; "checkout celebration" → success/confetti; "device offline state" → error/no-internet.
+   - **Color match (weight 0.2)**: if user mentions a color (TR/EN/ES/DE/FR/JA), check `dominantColor` against the named-color → hex map in `docs/search-strategy.md`. Score 1.0 if same hue family (within ±30° on HSL hue), 0.5 if within ±60°, 0 otherwise. Skip if user mentioned no color.
+   - **Style/duration match (weight 0.15)**: short/snappy (`duration < 1s`) vs. atmospheric (`duration > 3s`) vs. neutral. Match against user phrases: "quick"/"snappy"/"hızlı"/"rapide" → short; "smooth"/"atmospheric"/"yumuşak"/"tranquilo" → long.
+   - **Size match (weight 0.15)**: prefer smaller `sizeKb` for production-critical contexts ("loader on landing page", "splash on slow connection"). Penalize entries over 200KB unless user specifically asked for "rich"/"detailed"/"high-fidelity".
+
+   Sum the weighted scores; surface the top 3 entries. If the top entry's score < 0.4, treat it as a catalog miss and proceed to step 2.
+
+   **Pre-translate the query** using the i18n keyword maps in `docs/search-strategy.md` (TR/ES/DE/FR/JA → EN) before scoring.
 
 2. **Catalog miss → LottieFiles search index.** WebFetch `https://lottiefiles.com/free-animations/<topic>` (e.g. `/loading`, `/success`). The index page returns 200 and lists `/free-animation/<slug>` links. Extract 3–5 candidate slugs.
 
