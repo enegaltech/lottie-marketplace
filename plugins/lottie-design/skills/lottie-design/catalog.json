@@ -3582,5 +3582,1442 @@
       "h": 88
     },
     "dominantColor": null
+  },
+  {
+    "id": "gh-lottie-flutter-android-fingerprint",
+    "title": "Android Fingerprint",
+    "category": "onboarding",
+    "tags": [
+      "onboarding",
+      "android",
+      "fingerprint"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/android_fingerprint.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/android_fingerprint.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 5,
+    "frames": 39,
+    "duration": 1.56,
+    "dimensions": {
+      "w": 650,
+      "h": 230
+    },
+    "dominantColor": "#43FD77"
+  },
+  {
+    "id": "gh-lottie-flutter-autoconnect-loading",
+    "title": "Autoconnect Loading",
+    "category": "loader",
+    "tags": [
+      "loading",
+      "spinner",
+      "autoconnect"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/autoconnect_loading.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/autoconnect_loading.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 12,
+    "frames": 50,
+    "duration": 1,
+    "dimensions": {
+      "w": 720,
+      "h": 250
+    },
+    "dominantColor": "#12DEED"
+  },
+  {
+    "id": "gh-lottie-flutter-bb8",
+    "title": "Bb8",
+    "category": "character",
+    "tags": [
+      "character",
+      "bb8"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/bb8.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/bb8.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 149,
+    "frames": 152,
+    "duration": 6.08,
+    "dimensions": {
+      "w": 2000,
+      "h": 2000
+    },
+    "dominantColor": "#CEC8C8"
+  },
+  {
+    "id": "gh-lottie-flutter-birds",
+    "title": "Birds",
+    "category": "character",
+    "tags": [
+      "character",
+      "birds"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/birds.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/birds.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 24,
+    "frames": 155,
+    "duration": 5.17,
+    "dimensions": {
+      "w": 320,
+      "h": 338
+    },
+    "dominantColor": "#80D4C3"
+  },
+  {
+    "id": "gh-lottie-flutter-bitcoin-to-the-moon",
+    "title": "Bitcoin To The Moon",
+    "category": "payment",
+    "tags": [
+      "payment",
+      "bitcoin",
+      "the",
+      "moon"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/bitcoin_to_the_moon.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/bitcoin_to_the_moon.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 648,
+    "frames": 480,
+    "duration": 16,
+    "dimensions": {
+      "w": 1800,
+      "h": 1800
+    },
+    "dominantColor": "#FFFFFF"
+  },
+  {
+    "id": "gh-lottie-flutter-brain",
+    "title": "Brain",
+    "category": "weather",
+    "tags": [
+      "weather",
+      "brain"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/brain__.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/brain__.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 21,
+    "frames": 26,
+    "duration": 13,
+    "dimensions": {
+      "w": 1024,
+      "h": 1024
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "gh-lottie-flutter-cloud-disconnection",
+    "title": "Cloud Disconnection",
+    "category": "weather",
+    "tags": [
+      "weather",
+      "cloud",
+      "disconnection"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/cloud_disconnection.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/cloud_disconnection.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 29,
+    "frames": 100,
+    "duration": 3.34,
+    "dimensions": {
+      "w": 72,
+      "h": 72
+    },
+    "dominantColor": "#7FBFD6"
+  },
+  {
+    "id": "gh-lottie-flutter-coinfall",
+    "title": "Coinfall",
+    "category": "payment",
+    "tags": [
+      "payment",
+      "coinfall"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/coinfall.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/coinfall.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 103,
+    "frames": 131,
+    "duration": 4.37,
+    "dimensions": {
+      "w": 720,
+      "h": 720
+    },
+    "dominantColor": "#FFFFFF"
+  },
+  {
+    "id": "gh-lottie-flutter-credit-level",
+    "title": "Credit Level",
+    "category": "payment",
+    "tags": [
+      "payment",
+      "credit",
+      "level"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/credit_level.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/credit_level.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 14,
+    "frames": 31,
+    "duration": 1.03,
+    "dimensions": {
+      "w": 304,
+      "h": 188
+    },
+    "dominantColor": "#FFFFFF"
+  },
+  {
+    "id": "gh-lottie-flutter-curly-hair-character-loop",
+    "title": "Curly Hair Character Loop",
+    "category": "character",
+    "tags": [
+      "character",
+      "curly",
+      "hair",
+      "loop"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/curly_hair_character_loop.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/curly_hair_character_loop.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 22,
+    "frames": 48,
+    "duration": 2,
+    "dimensions": {
+      "w": 500,
+      "h": 500
+    },
+    "dominantColor": "#5296AC"
+  },
+  {
+    "id": "gh-lottie-flutter-delivery-van",
+    "title": "Delivery Van",
+    "category": "ecommerce",
+    "tags": [
+      "ecommerce",
+      "delivery",
+      "van"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/delivery_van.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/delivery_van.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 325,
+    "frames": 241,
+    "duration": 8.04,
+    "dimensions": {
+      "w": 1920,
+      "h": 1080
+    },
+    "dominantColor": "#5AA7AF"
+  },
+  {
+    "id": "gh-lottie-flutter-dog",
+    "title": "Dog",
+    "category": "character",
+    "tags": [
+      "character",
+      "dog"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/dog.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/dog.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 21,
+    "frames": 40,
+    "duration": 1.6,
+    "dimensions": {
+      "w": 600,
+      "h": 600
+    },
+    "dominantColor": "#F2D59A"
+  },
+  {
+    "id": "gh-lottie-flutter-download-copy",
+    "title": "Download Copy",
+    "category": "loader",
+    "tags": [
+      "loading",
+      "spinner",
+      "download",
+      "copy"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/download%20copy.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/download copy.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 437,
+    "frames": 240,
+    "duration": 10,
+    "dimensions": {
+      "w": 375,
+      "h": 337
+    },
+    "dominantColor": "#FD9353"
+  },
+  {
+    "id": "gh-lottie-flutter-download",
+    "title": "Download",
+    "category": "loader",
+    "tags": [
+      "loading",
+      "spinner",
+      "download"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/download.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/download.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 16,
+    "frames": 353,
+    "duration": 5.88,
+    "dimensions": {
+      "w": 1080,
+      "h": 1080
+    },
+    "dominantColor": "#FF0000"
+  },
+  {
+    "id": "gh-lottie-flutter-downloader",
+    "title": "Downloader",
+    "category": "loader",
+    "tags": [
+      "loading",
+      "spinner",
+      "downloader"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/downloader.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/downloader.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 51,
+    "frames": 30,
+    "duration": 1,
+    "dimensions": {
+      "w": 180,
+      "h": 180
+    },
+    "dominantColor": "#B4D12C"
+  },
+  {
+    "id": "gh-lottie-flutter-elephant-trunk-swing",
+    "title": "Elephant Trunk Swing",
+    "category": "character",
+    "tags": [
+      "character",
+      "elephant",
+      "trunk",
+      "swing"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/elephant_trunk_swing.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/elephant_trunk_swing.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 148,
+    "frames": 61,
+    "duration": 1.02,
+    "dimensions": {
+      "w": 800,
+      "h": 600
+    },
+    "dominantColor": "#8A8A8A"
+  },
+  {
+    "id": "gh-lottie-flutter-emoji-shock",
+    "title": "Emoji Shock",
+    "category": "character",
+    "tags": [
+      "character",
+      "emoji",
+      "shock"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/emoji_shock.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/emoji_shock.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 18,
+    "frames": 90,
+    "duration": 3,
+    "dimensions": {
+      "w": 100,
+      "h": 100
+    },
+    "dominantColor": null
+  },
+  {
+    "id": "gh-lottie-flutter-emoji-tongue",
+    "title": "Emoji Tongue",
+    "category": "character",
+    "tags": [
+      "character",
+      "emoji",
+      "tongue"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/emoji_tongue.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/emoji_tongue.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 9,
+    "frames": 30,
+    "duration": 1,
+    "dimensions": {
+      "w": 100,
+      "h": 100
+    },
+    "dominantColor": null
+  },
+  {
+    "id": "gh-lottie-flutter-emoji-wink",
+    "title": "Emoji Wink",
+    "category": "character",
+    "tags": [
+      "character",
+      "emoji",
+      "wink"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/emoji_wink.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/emoji_wink.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 9,
+    "frames": 60,
+    "duration": 2,
+    "dimensions": {
+      "w": 100,
+      "h": 100
+    },
+    "dominantColor": "#545447"
+  },
+  {
+    "id": "gh-lottie-flutter-fabulous-onboarding-animation",
+    "title": "Fabulous Onboarding Animation",
+    "category": "onboarding",
+    "tags": [
+      "onboarding",
+      "fabulous",
+      "animation"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/fabulous_onboarding_animation.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/fabulous_onboarding_animation.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 361,
+    "frames": 481,
+    "duration": 8.02,
+    "dimensions": {
+      "w": 280,
+      "h": 280
+    },
+    "dominantColor": "#FFDEFA"
+  },
+  {
+    "id": "gh-lottie-flutter-finance-animation",
+    "title": "Finance Animation",
+    "category": "payment",
+    "tags": [
+      "payment",
+      "finance",
+      "animation"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/finance_animation.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/finance_animation.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 50,
+    "frames": 240,
+    "duration": 8,
+    "dimensions": {
+      "w": 180,
+      "h": 180
+    },
+    "dominantColor": null
+  },
+  {
+    "id": "gh-lottie-flutter-finish-done",
+    "title": "Finish,Done",
+    "category": "success",
+    "tags": [
+      "success",
+      "done",
+      "finish"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/finish%2Cdone.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/finish,done.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 7,
+    "frames": 21,
+    "duration": 0.84,
+    "dimensions": {
+      "w": 800,
+      "h": 600
+    },
+    "dominantColor": "#FFFFFF"
+  },
+  {
+    "id": "gh-lottie-flutter-fish",
+    "title": "Fish",
+    "category": "character",
+    "tags": [
+      "character",
+      "fish"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/fish.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/fish.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 33,
+    "frames": 272,
+    "duration": 9.08,
+    "dimensions": {
+      "w": 1000,
+      "h": 1000
+    },
+    "dominantColor": "#FFFFFF"
+  },
+  {
+    "id": "gh-lottie-flutter-frog",
+    "title": "Frog",
+    "category": "character",
+    "tags": [
+      "character",
+      "frog"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/frog.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/frog.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 110,
+    "frames": 109,
+    "duration": 3.63,
+    "dimensions": {
+      "w": 400,
+      "h": 300
+    },
+    "dominantColor": null
+  },
+  {
+    "id": "gh-lottie-flutter-infinite-rainbow",
+    "title": "Infinite Rainbow",
+    "category": "weather",
+    "tags": [
+      "weather",
+      "infinite",
+      "rainbow"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/infinite_rainbow.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/infinite_rainbow.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 15,
+    "frames": 35,
+    "duration": 1.4,
+    "dimensions": {
+      "w": 800,
+      "h": 600
+    },
+    "dominantColor": "#F7514D"
+  },
+  {
+    "id": "gh-lottie-flutter-jojo-the-bird",
+    "title": "Jojo The Bird",
+    "category": "character",
+    "tags": [
+      "character",
+      "jojo",
+      "the",
+      "bird"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/jojo_the_bird.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/jojo_the_bird.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 18,
+    "frames": 40,
+    "duration": 0.67,
+    "dimensions": {
+      "w": 600,
+      "h": 500
+    },
+    "dominantColor": "#979797"
+  },
+  {
+    "id": "gh-lottie-flutter-little-girl-jumping-loader",
+    "title": "Little Girl Jumping Loader",
+    "category": "loader",
+    "tags": [
+      "loading",
+      "spinner",
+      "little",
+      "girl",
+      "jumping",
+      "loader"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/little_girl_jumping_-_loader.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/little_girl_jumping_-_loader.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 76,
+    "frames": 34,
+    "duration": 1.36,
+    "dimensions": {
+      "w": 500,
+      "h": 500
+    },
+    "dominantColor": "#F31D4A"
+  },
+  {
+    "id": "gh-lottie-flutter-loading",
+    "title": "Loading",
+    "category": "loader",
+    "tags": [
+      "loading",
+      "spinner"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/loading.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/loading.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 12,
+    "frames": 40,
+    "duration": 2,
+    "dimensions": {
+      "w": 160,
+      "h": 160
+    },
+    "dominantColor": null
+  },
+  {
+    "id": "gh-lottie-flutter-loading-copy",
+    "title": "Loading Copy",
+    "category": "loader",
+    "tags": [
+      "loading",
+      "spinner",
+      "copy"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/loading_copy.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/loading_copy.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 514,
+    "frames": 900,
+    "duration": 30.03,
+    "dimensions": {
+      "w": 237,
+      "h": 237
+    },
+    "dominantColor": null
+  },
+  {
+    "id": "gh-lottie-flutter-location-pin",
+    "title": "Location Pin",
+    "category": "onboarding",
+    "tags": [
+      "onboarding",
+      "location",
+      "pin"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/location_pin.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/location_pin.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 4,
+    "frames": 32,
+    "duration": 1.07,
+    "dimensions": {
+      "w": 600,
+      "h": 600
+    },
+    "dominantColor": "#BDC2C7"
+  },
+  {
+    "id": "gh-lottie-flutter-man-and-pay-with-credit-card",
+    "title": "Man And Pay With Credit Card",
+    "category": "payment",
+    "tags": [
+      "payment",
+      "man",
+      "and",
+      "pay",
+      "with",
+      "credit"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/man_and_pay_with_credit_card.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/man_and_pay_with_credit_card.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 364,
+    "frames": 226,
+    "duration": 9.04,
+    "dimensions": {
+      "w": 209,
+      "h": 279
+    },
+    "dominantColor": "#FFFFFF"
+  },
+  {
+    "id": "gh-lottie-flutter-map-animation",
+    "title": "Map Animation",
+    "category": "onboarding",
+    "tags": [
+      "onboarding",
+      "map",
+      "animation"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/map_animation.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/map_animation.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 220,
+    "frames": 90,
+    "duration": 3,
+    "dimensions": {
+      "w": 1440,
+      "h": 1024
+    },
+    "dominantColor": null
+  },
+  {
+    "id": "gh-lottie-flutter-material-loading",
+    "title": "Material Loading",
+    "category": "loader",
+    "tags": [
+      "loading",
+      "spinner",
+      "material"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/material%20loading.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/material loading.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 6,
+    "frames": 119,
+    "duration": 3.97,
+    "dimensions": {
+      "w": 256,
+      "h": 256
+    },
+    "dominantColor": "#06DA3D"
+  },
+  {
+    "id": "gh-lottie-flutter-patient-successfully-added",
+    "title": "Patient Successfully Added",
+    "category": "success",
+    "tags": [
+      "success",
+      "done",
+      "patient",
+      "successfully",
+      "added"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/patient_successfully_added.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/patient_successfully_added.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 33,
+    "frames": 115,
+    "duration": 1.92,
+    "dimensions": {
+      "w": 800,
+      "h": 600
+    },
+    "dominantColor": "#FFFFFF"
+  },
+  {
+    "id": "gh-lottie-flutter-personal-character",
+    "title": "Personal Character",
+    "category": "character",
+    "tags": [
+      "character",
+      "personal"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/personal_character.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/personal_character.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 77,
+    "frames": 162,
+    "duration": 5.4,
+    "dimensions": {
+      "w": 900,
+      "h": 900
+    },
+    "dominantColor": "#AF957E"
+  },
+  {
+    "id": "gh-lottie-flutter-ph-onboarding",
+    "title": "Ph Onboarding",
+    "category": "onboarding",
+    "tags": [
+      "onboarding"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/ph_onboarding_.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/ph_onboarding_.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 616,
+    "frames": 899,
+    "duration": 29.97,
+    "dimensions": {
+      "w": 360,
+      "h": 640
+    },
+    "dominantColor": "#FFFFFF"
+  },
+  {
+    "id": "gh-lottie-flutter-play-and-like-it",
+    "title": "Play And Like It",
+    "category": "social-share",
+    "tags": [
+      "social",
+      "play",
+      "and",
+      "like"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/play_and_like_it.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/play_and_like_it.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 12,
+    "frames": 77,
+    "duration": 3.08,
+    "dimensions": {
+      "w": 800,
+      "h": 600
+    },
+    "dominantColor": "#EDEDF0"
+  },
+  {
+    "id": "gh-lottie-flutter-poo-loader",
+    "title": "Poo Loader",
+    "category": "loader",
+    "tags": [
+      "loading",
+      "spinner",
+      "poo",
+      "loader"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/poo_loader.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/poo_loader.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 176,
+    "frames": 240,
+    "duration": 8.01,
+    "dimensions": {
+      "w": 450,
+      "h": 600
+    },
+    "dominantColor": "#7B4A0B"
+  },
+  {
+    "id": "gh-lottie-flutter-powerupp-app-onboard-1",
+    "title": "Powerupp App Onboard (1)",
+    "category": "onboarding",
+    "tags": [
+      "onboarding",
+      "powerupp",
+      "app",
+      "onboard"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/powerupp_app_onboard%20(1).json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/powerupp_app_onboard (1).json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 436,
+    "frames": 640,
+    "duration": 12.8,
+    "dimensions": {
+      "w": 1125,
+      "h": 1053
+    },
+    "dominantColor": null
+  },
+  {
+    "id": "gh-lottie-flutter-powerupp-app-onboard",
+    "title": "Powerupp App Onboard",
+    "category": "onboarding",
+    "tags": [
+      "onboarding",
+      "powerupp",
+      "app",
+      "onboard"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/powerupp_app_onboard.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/powerupp_app_onboard.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 436,
+    "frames": 640,
+    "duration": 12.8,
+    "dimensions": {
+      "w": 1125,
+      "h": 1053
+    },
+    "dominantColor": null
+  },
+  {
+    "id": "gh-lottie-flutter-progress-bar-2",
+    "title": "Progress Bar 2",
+    "category": "loader",
+    "tags": [
+      "loading",
+      "spinner",
+      "progress",
+      "bar"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/progress_bar%202.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/progress_bar 2.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 6,
+    "frames": 61,
+    "duration": 2.04,
+    "dimensions": {
+      "w": 400,
+      "h": 400
+    },
+    "dominantColor": null
+  },
+  {
+    "id": "gh-lottie-flutter-progress-bar",
+    "title": "Progress Bar",
+    "category": "loader",
+    "tags": [
+      "loading",
+      "spinner",
+      "progress",
+      "bar"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/progress_bar.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/progress_bar.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 7,
+    "frames": 251,
+    "duration": 5.23,
+    "dimensions": {
+      "w": 1440,
+      "h": 1080
+    },
+    "dominantColor": "#FFFFFF"
+  },
+  {
+    "id": "gh-lottie-flutter-red-pocket-pop-up",
+    "title": "Red Pocket Pop Up",
+    "category": "social-share",
+    "tags": [
+      "social",
+      "red",
+      "pocket",
+      "pop"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/red_pocket_pop_up.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/red_pocket_pop_up.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 36,
+    "frames": 120,
+    "duration": 2,
+    "dimensions": {
+      "w": 126,
+      "h": 126
+    },
+    "dominantColor": "#FFDE00"
+  },
+  {
+    "id": "gh-lottie-flutter-rejection",
+    "title": "Rejection",
+    "category": "error",
+    "tags": [
+      "error",
+      "fail",
+      "rejection"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/rejection.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/rejection.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 17,
+    "frames": 87,
+    "duration": 3.48,
+    "dimensions": {
+      "w": 1080,
+      "h": 1080
+    },
+    "dominantColor": null
+  },
+  {
+    "id": "gh-lottie-flutter-rocksauce-title-card",
+    "title": "Rocksauce Title Card",
+    "category": "payment",
+    "tags": [
+      "payment",
+      "rocksauce",
+      "title",
+      "card"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/rocksauce_title_card.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/rocksauce_title_card.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 33,
+    "frames": 300,
+    "duration": 10.01,
+    "dimensions": {
+      "w": 600,
+      "h": 600
+    },
+    "dominantColor": null
+  },
+  {
+    "id": "gh-lottie-flutter-servishero-loading",
+    "title": "Servishero Loading",
+    "category": "loader",
+    "tags": [
+      "loading",
+      "spinner",
+      "servishero"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/servishero_loading.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/servishero_loading.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 75,
+    "frames": 290,
+    "duration": 4.83,
+    "dimensions": {
+      "w": 450,
+      "h": 450
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "gh-lottie-flutter-snowcation",
+    "title": "Snowcation",
+    "category": "weather",
+    "tags": [
+      "weather",
+      "snowcation"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/snowcation.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/snowcation.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 21,
+    "frames": 151,
+    "duration": 5.03,
+    "dimensions": {
+      "w": 500,
+      "h": 500
+    },
+    "dominantColor": "#F2F2F2"
+  },
+  {
+    "id": "gh-lottie-flutter-square-drop-loader",
+    "title": "Square Drop Loader",
+    "category": "loader",
+    "tags": [
+      "loading",
+      "spinner",
+      "square",
+      "drop",
+      "loader"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/square_drop_loader.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/square_drop_loader.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 62,
+    "frames": 112,
+    "duration": 3.73,
+    "dimensions": {
+      "w": 800,
+      "h": 600
+    },
+    "dominantColor": null
+  },
+  {
+    "id": "gh-lottie-flutter-star-2",
+    "title": "Star 2",
+    "category": "ecommerce",
+    "tags": [
+      "ecommerce",
+      "star"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/star%202.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/star 2.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 14,
+    "frames": 30,
+    "duration": 1.2,
+    "dimensions": {
+      "w": 600,
+      "h": 600
+    },
+    "dominantColor": "#738FBA"
+  },
+  {
+    "id": "gh-lottie-flutter-streetby-test-loading",
+    "title": "Streetby Test Loading",
+    "category": "loader",
+    "tags": [
+      "loading",
+      "spinner",
+      "streetby",
+      "test"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/streetby_test_loading.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/streetby_test_loading.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 91,
+    "frames": 436,
+    "duration": 7.27,
+    "dimensions": {
+      "w": 320,
+      "h": 320
+    },
+    "dominantColor": null
+  },
+  {
+    "id": "gh-lottie-flutter-swipe-menu",
+    "title": "Swipe Menu",
+    "category": "onboarding",
+    "tags": [
+      "onboarding",
+      "swipe",
+      "menu"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/swipe_menu.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/swipe_menu.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 18,
+    "frames": 285,
+    "duration": 4.75,
+    "dimensions": {
+      "w": 500,
+      "h": 500
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "gh-lottie-flutter-updating-map",
+    "title": "Updating Map",
+    "category": "onboarding",
+    "tags": [
+      "onboarding",
+      "updating",
+      "map"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/updating_map.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/updating_map.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 57,
+    "frames": 638,
+    "duration": 10.64,
+    "dimensions": {
+      "w": 240,
+      "h": 160
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "gh-lottie-flutter-volume-indicator",
+    "title": "Volume Indicator",
+    "category": "character",
+    "tags": [
+      "character",
+      "volume",
+      "indicator"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/volume_indicator.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/volume_indicator.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 93,
+    "frames": 72,
+    "duration": 3,
+    "dimensions": {
+      "w": 500,
+      "h": 350
+    },
+    "dominantColor": "#4DFFB2"
+  },
+  {
+    "id": "gh-lottie-flutter-volume-shake-indicator",
+    "title": "Volume Shake Indicator",
+    "category": "character",
+    "tags": [
+      "character",
+      "volume",
+      "shake",
+      "indicator"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/volume_shake_indicator.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/volume_shake_indicator.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 30,
+    "frames": 48,
+    "duration": 2,
+    "dimensions": {
+      "w": 800,
+      "h": 800
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "gh-lottie-flutter-walking",
+    "title": "Walking",
+    "category": "character",
+    "tags": [
+      "character",
+      "walking"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/walking.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/walking.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 22,
+    "frames": 16,
+    "duration": 0.67,
+    "dimensions": {
+      "w": 1920,
+      "h": 1080
+    },
+    "dominantColor": "#F7BF75"
+  },
+  {
+    "id": "gh-lottie-flutter-wolf-peek",
+    "title": "Wolf Peek",
+    "category": "character",
+    "tags": [
+      "character",
+      "wolf",
+      "peek"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/wolf_peek.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/wolf_peek.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 38,
+    "frames": 43,
+    "duration": 0.72,
+    "dimensions": {
+      "w": 76,
+      "h": 75
+    },
+    "dominantColor": "#A5C1A7"
+  },
+  {
+    "id": "gh-lottie-flutter-youtube-icon-reveal",
+    "title": "Youtube Icon Reveal",
+    "category": "social-share",
+    "tags": [
+      "social",
+      "youtube",
+      "icon",
+      "reveal"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/lottiefiles/youtube_icon_reveal.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/xvrh/lottie-flutter/blob/master/example/assets/lottiefiles/youtube_icon_reveal.json",
+    "author": "xvrh/lottie-flutter",
+    "source": "github-mirror",
+    "license": "Lottie Simple License",
+    "attributionRequired": false,
+    "sizeKb": 132,
+    "frames": 211,
+    "duration": 7.03,
+    "dimensions": {
+      "w": 800,
+      "h": 600
+    },
+    "dominantColor": "#E7E0E0"
   }
 ]

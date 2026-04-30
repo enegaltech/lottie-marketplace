@@ -129,6 +129,44 @@ Use **AskUserQuestion** as the primary picker — it handles the "Other" escape 
 
 `curl -sI <url>` → must be 200. Prefer dotLottie (`.lottie`) over JSON when both exist.
 
+### Step 5.5 — Asset mode (CDN vs local)
+
+Default: **CDN mode** (`src=<url>`). Skill embeds the URL directly in the component. Pros: zero file footprint, always latest version. Cons: runtime network dependency, can break if CDN deletes the file.
+
+Switch to **local mode** if any of these is true (auto-detect, don't ask):
+- User says "local", "offline", "indir", "bundle", "embed", "no CDN", "self-host".
+- Project has a `public/animations/` or `src/assets/animations/` directory already populated → use the same convention.
+- File `sizeKb < 100` AND the entry's source is `github-mirror` (xvrh) — the mirror is essentially a sample repo, prefer pinning a copy.
+
+To switch to local mode:
+
+```
+node scripts/download-asset.js <jsonUrl> <projectRoot> [framework]
+```
+
+The script downloads the asset to the conventional location for the framework:
+- React (Vite/CRA): `src/assets/animations/<name>.json`
+- Next.js: `public/animations/<name>.json`
+- React Native: `src/assets/animations/<name>.json`
+- Flutter: `assets/animations/<name>.json` + auto-patches `pubspec.yaml` asset registration
+- Vanilla: `animations/<name>.json`
+
+It prints a JSON summary including `importHint`. Use that hint when filling the template `{{src}}` placeholder.
+
+For React, the `{{src}}` value becomes one of:
+- CDN mode:   `"https://lottie.host/<uuid>/<id>.json"`
+- Local mode: imported asset → set `{{src}}` to a JSX expression like `{animationData}` and add the import on top:
+  ```tsx
+  import animationData from '@/assets/animations/<name>.json';
+  // then: <DotLottieReact src={animationData} ... />
+  ```
+
+For React Native local mode, use `require('./assets/animations/<name>.json')` as the source.
+For Flutter local mode, use `Lottie.asset('assets/animations/<name>.json')` instead of `Lottie.network(...)`.
+For Vanilla local mode, point `<dotlottie-wc src="animations/<name>.json">` to the relative path.
+
+Always tell the user which mode you used and why, in one line at the top of the success summary.
+
 ### Step 6 — Generate code
 
 Read the right template based on framework + TS/JS detection:
@@ -140,13 +178,22 @@ Read the right template based on framework + TS/JS detection:
 - Vanilla → `templates/vanilla.html.template` (raw HTML snippet)
 
 **Placeholder fill rules:**
-- `{{src}}` — direct URL (lottie.host preferred)
-- `{{sourceUrl}}` — original lottiefiles.com page (for license header)
+- `{{sourceUrl}}` — original page or repo URL (for license header)
 - `{{componentName}}` — PascalCase from animation title (e.g. `SuccessCheckAnimation`, `LoadingPulse`)
 - `{{license}}` — entry's `license` field
 - `{{attributionNote}}` — for CC-BY entries: ` (attribution required: see footer credit below)`; for Lottie Simple License: empty string
 - `{{size}}` — user-specified size or default 200
 - `{{author}}` — entry's `author` field (used in attribution string)
+
+**React-specific (CDN vs local mode):**
+- CDN mode:
+  - `{{importLine}}` → empty string
+  - `{{srcExpr}}` → `"<https URL>"`  (note quotes — produces `src={"https://..."}`, equivalent to `src="https://..."`)
+- Local mode (after `download-asset.js`):
+  - `{{importLine}}` → `import animationData from '<relative-path>';`
+  - `{{srcExpr}}` → `animationData`  (no quotes — produces `src={animationData}`)
+
+**React Native, Flutter, Vanilla**: keep using the framework templates as-is. For local mode in those frameworks, swap the URL source for `require(...)` (RN), `Lottie.asset(...)` (Flutter), or relative path (Vanilla).
 
 **Path resolution:**
 - Look for an existing animations dir: `src/components/animations/`, `src/components/ui/animations/`, `app/components/animations/`, `lib/widgets/`

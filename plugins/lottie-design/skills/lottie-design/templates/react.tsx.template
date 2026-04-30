@@ -1,5 +1,6 @@
 // Source: {{sourceUrl}} — {{license}}{{attributionNote}}
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+{{importLine}}
 
 interface {{componentName}}Props {
   size?: number;
@@ -9,7 +10,7 @@ interface {{componentName}}Props {
 export function {{componentName}}({ size = {{size}}, className }: {{componentName}}Props) {
   return (
     <DotLottieReact
-      src="{{src}}"
+      src={{{srcExpr}}}
       autoplay
       loop
       className={className}

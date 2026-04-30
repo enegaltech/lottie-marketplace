@@ -1,14 +1,29 @@
 # Lottie Catalog
 
-**140 verified entries** across 11 categories. Extend by adding rows to `catalog.json` and re-running `node scripts/enrich-catalog.js` to backfill metadata.
+**197 verified entries** across 10 categories. Extend by adding rows to `catalog.json` and re-running `node scripts/enrich-catalog.js` to backfill metadata.
 
 ## Source pools
 
 | Source | Count | License | Attribution |
 |---|---|---|---|
 | **useAnimations** (`ua-*`) | 79 | CC-BY 4.0 | ✅ Required |
-| **LottieFiles community** (assets CDN, `lf-*` legacy) | 8 | Lottie Simple License | ⚪ Optional |
-| **xvrh/lottie-flutter mirror** (`lf-*-*`) | 53 | Lottie Simple License (MIT mirror) | ⚪ Optional |
+| **LottieFiles community CDN** (`lf-*`) | 8 | Lottie Simple License | ⚪ Optional |
+| **xvrh/lottie-flutter mirror** (curated `lf-*` + auto-scraped `gh-*`) | 110 | Lottie Simple License (MIT mirror) | ⚪ Optional |
+
+## Category counts
+
+| Category | Count |
+|---|---|
+| onboarding | 62 |
+| loader | 39 |
+| character | 19 |
+| social-share | 19 |
+| ecommerce | 13 |
+| payment | 12 |
+| success | 11 |
+| weather | 9 |
+| error | 8 |
+| empty-state | 5 |
 
 ## Categories
 
