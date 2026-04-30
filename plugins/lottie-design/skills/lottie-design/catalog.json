@@ -1238,5 +1238,1013 @@
       "h": 500
     },
     "dominantColor": "#FFFFFF"
+  },
+  {
+    "id": "ua-activity",
+    "title": "Activity Pulse",
+    "category": "onboarding",
+    "tags": [
+      "activity",
+      "pulse",
+      "heartbeat",
+      "vitals"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/activity/activity.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/activity/activity.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 3,
+    "frames": 40,
+    "duration": 1.33,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-airplay",
+    "title": "AirPlay Cast",
+    "category": "onboarding",
+    "tags": [
+      "airplay",
+      "cast",
+      "stream",
+      "tv"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/airplay/airplay.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/airplay/airplay.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 3,
+    "frames": 30,
+    "duration": 1,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-alert-octagon",
+    "title": "Alert Octagon",
+    "category": "error",
+    "tags": [
+      "alert",
+      "warning",
+      "octagon",
+      "stop"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/alertOctagon/alertOctagon.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/alertOctagon/alertOctagon.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 4,
+    "frames": 45,
+    "duration": 1.5,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-arrow-down",
+    "title": "Arrow Down",
+    "category": "onboarding",
+    "tags": [
+      "arrow",
+      "down",
+      "direction"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/arrowDown/arrowDown.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/arrowDown/arrowDown.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 2,
+    "frames": 180,
+    "duration": 3,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-arrow-down-circle",
+    "title": "Arrow Down Circle",
+    "category": "onboarding",
+    "tags": [
+      "arrow",
+      "down",
+      "circle"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/arrowDownCircle/arrowDownCircle.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/arrowDownCircle/arrowDownCircle.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 4,
+    "frames": 75,
+    "duration": 2.5,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-arrow-left-circle",
+    "title": "Arrow Left Circle",
+    "category": "onboarding",
+    "tags": [
+      "arrow",
+      "left",
+      "back",
+      "circle"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/arrowLeftCircle/arrowLeftCircle.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/arrowLeftCircle/arrowLeftCircle.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 4,
+    "frames": 75,
+    "duration": 2.5,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-arrow-right-circle",
+    "title": "Arrow Right Circle",
+    "category": "onboarding",
+    "tags": [
+      "arrow",
+      "right",
+      "next",
+      "circle"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/arrowRightCircle/arrowRightCircle.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/arrowRightCircle/arrowRightCircle.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 4,
+    "frames": 75,
+    "duration": 2.5,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-arrow-up",
+    "title": "Arrow Up",
+    "category": "onboarding",
+    "tags": [
+      "arrow",
+      "up",
+      "direction"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/arrowUp/arrowUp.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/arrowUp/arrowUp.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 2,
+    "frames": 180,
+    "duration": 3,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-arrow-up-circle",
+    "title": "Arrow Up Circle",
+    "category": "onboarding",
+    "tags": [
+      "arrow",
+      "up",
+      "circle",
+      "top"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/arrowUpCircle/arrowUpCircle.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/arrowUpCircle/arrowUpCircle.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 4,
+    "frames": 75,
+    "duration": 2.5,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-behance",
+    "title": "Behance Logo",
+    "category": "social-share",
+    "tags": [
+      "behance",
+      "social",
+      "logo",
+      "design"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/behance/behance.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/behance/behance.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 4,
+    "frames": 45,
+    "duration": 1.5,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-calendar",
+    "title": "Calendar",
+    "category": "onboarding",
+    "tags": [
+      "calendar",
+      "date",
+      "schedule",
+      "time"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/calendar/calendar.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/calendar/calendar.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 5,
+    "frames": 8,
+    "duration": 0.27,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-codepen",
+    "title": "CodePen Logo",
+    "category": "social-share",
+    "tags": [
+      "codepen",
+      "social",
+      "logo",
+      "developer"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/codepen/codepen.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/codepen/codepen.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 6,
+    "frames": 50,
+    "duration": 1.67,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-dribbble",
+    "title": "Dribbble Logo",
+    "category": "social-share",
+    "tags": [
+      "dribbble",
+      "social",
+      "logo",
+      "design"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/dribbble/dribbble.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/dribbble/dribbble.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 11,
+    "frames": 60,
+    "duration": 2,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-explore",
+    "title": "Explore Compass",
+    "category": "onboarding",
+    "tags": [
+      "explore",
+      "compass",
+      "navigate",
+      "discover"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/explore/explore.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/explore/explore.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 2,
+    "frames": 25,
+    "duration": 0.83,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-home",
+    "title": "Home Icon",
+    "category": "onboarding",
+    "tags": [
+      "home",
+      "house",
+      "main"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/home/home.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/home/home.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 3,
+    "frames": 31,
+    "duration": 0.52,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-infinity",
+    "title": "Infinity Loop",
+    "category": "onboarding",
+    "tags": [
+      "infinity",
+      "loop",
+      "endless",
+      "forever"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/infinity/infinity.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/infinity/infinity.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 3,
+    "frames": 120,
+    "duration": 4,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-maximize-minimize",
+    "title": "Maximize / Minimize",
+    "category": "onboarding",
+    "tags": [
+      "maximize",
+      "minimize",
+      "fullscreen",
+      "window"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/maximizeMinimize/maximizeMinimize.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/maximizeMinimize/maximizeMinimize.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 4,
+    "frames": 10,
+    "duration": 0.33,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-maximize-minimize2",
+    "title": "Maximize / Minimize 2",
+    "category": "onboarding",
+    "tags": [
+      "maximize",
+      "minimize",
+      "window",
+      "toggle"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/maximizeMinimize2/maximizeMinimize2.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/maximizeMinimize2/maximizeMinimize2.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 5,
+    "frames": 30,
+    "duration": 1,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-menu2",
+    "title": "Menu Variant 2",
+    "category": "onboarding",
+    "tags": [
+      "menu",
+      "hamburger",
+      "close",
+      "x"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/menu2/menu2.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/menu2/menu2.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 3,
+    "frames": 60,
+    "duration": 2,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-menu3",
+    "title": "Menu Variant 3",
+    "category": "onboarding",
+    "tags": [
+      "menu",
+      "hamburger",
+      "close",
+      "x"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/menu3/menu3.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/menu3/menu3.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 4,
+    "frames": 45,
+    "duration": 1.5,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-menu4",
+    "title": "Menu Variant 4",
+    "category": "onboarding",
+    "tags": [
+      "menu",
+      "hamburger",
+      "close",
+      "x"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/menu4/menu4.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/menu4/menu4.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 3,
+    "frames": 21,
+    "duration": 0.7,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-microphone2",
+    "title": "Microphone Variant 2",
+    "category": "onboarding",
+    "tags": [
+      "mic",
+      "microphone",
+      "voice",
+      "record"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/microphone2/microphone2.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/microphone2/microphone2.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 6,
+    "frames": 25,
+    "duration": 0.83,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-notification2",
+    "title": "Notification Variant 2",
+    "category": "onboarding",
+    "tags": [
+      "notification",
+      "bell",
+      "alert",
+      "ring"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/notification2/notification2.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/notification2/notification2.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 6,
+    "frames": 25,
+    "duration": 0.83,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-play-pause-circle",
+    "title": "Play Pause Circle",
+    "category": "onboarding",
+    "tags": [
+      "play",
+      "pause",
+      "circle",
+      "media"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/playPauseCircle/playPauseCircle.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/playPauseCircle/playPauseCircle.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 3,
+    "frames": 8,
+    "duration": 0.27,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-plus-to-x",
+    "title": "Plus to X Toggle",
+    "category": "onboarding",
+    "tags": [
+      "plus",
+      "x",
+      "add",
+      "close",
+      "toggle"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/plusToX/plusToX.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/plusToX/plusToX.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 2,
+    "frames": 30,
+    "duration": 1,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-pocket",
+    "title": "Pocket Logo",
+    "category": "social-share",
+    "tags": [
+      "pocket",
+      "save",
+      "social",
+      "logo"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/pocket/pocket.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/pocket/pocket.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 2,
+    "frames": 30,
+    "duration": 1,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-radio-button",
+    "title": "Radio Button",
+    "category": "success",
+    "tags": [
+      "radio",
+      "button",
+      "input",
+      "select"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/radioButton/radioButton.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/radioButton/radioButton.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 3,
+    "frames": 30,
+    "duration": 1,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-scroll-down",
+    "title": "Scroll Down Indicator",
+    "category": "onboarding",
+    "tags": [
+      "scroll",
+      "down",
+      "indicator",
+      "gesture"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/scrollDown/scrollDown.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/scrollDown/scrollDown.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 2,
+    "frames": 90,
+    "duration": 3,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-settings2",
+    "title": "Settings Variant 2",
+    "category": "onboarding",
+    "tags": [
+      "settings",
+      "gear",
+      "config",
+      "options"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/settings2/settings2.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/settings2/settings2.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 9,
+    "frames": 10,
+    "duration": 0.33,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-skip-back",
+    "title": "Skip Back",
+    "category": "onboarding",
+    "tags": [
+      "skip",
+      "back",
+      "previous",
+      "media"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/skipBack/skipBack.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/skipBack/skipBack.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 7,
+    "frames": 60,
+    "duration": 2,
+    "dimensions": {
+      "w": 24,
+      "h": 24
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-skip-forward",
+    "title": "Skip Forward",
+    "category": "onboarding",
+    "tags": [
+      "skip",
+      "forward",
+      "next",
+      "media"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/skipForward/skipForward.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/skipForward/skipForward.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 7,
+    "frames": 60,
+    "duration": 2,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-toggle",
+    "title": "Toggle Switch",
+    "category": "success",
+    "tags": [
+      "toggle",
+      "switch",
+      "on",
+      "off"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/toggle/toggle.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/toggle/toggle.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 2,
+    "frames": 15,
+    "duration": 0.5,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-trash2",
+    "title": "Trash Variant 2",
+    "category": "ecommerce",
+    "tags": [
+      "trash",
+      "delete",
+      "remove",
+      "bin"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/trash2/trash2.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/trash2/trash2.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 5,
+    "frames": 5,
+    "duration": 0.17,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-user-x",
+    "title": "Remove User X",
+    "category": "onboarding",
+    "tags": [
+      "user",
+      "x",
+      "remove",
+      "block"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/userX/userX.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/userX/userX.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 4,
+    "frames": 8,
+    "duration": 0.27,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-video2",
+    "title": "Video Variant 2",
+    "category": "onboarding",
+    "tags": [
+      "video",
+      "camera",
+      "record"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/video2/video2.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/video2/video2.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 4,
+    "frames": 16,
+    "duration": 0.53,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-visibility2",
+    "title": "Visibility Variant 2",
+    "category": "onboarding",
+    "tags": [
+      "eye",
+      "visibility",
+      "show",
+      "hide"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/visibility2/visibility2.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/visibility2/visibility2.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 4,
+    "frames": 25,
+    "duration": 0.83,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-youtube2",
+    "title": "YouTube Variant 2",
+    "category": "social-share",
+    "tags": [
+      "youtube",
+      "video",
+      "social",
+      "logo"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/youtube2/youtube2.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/youtube2/youtube2.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 16,
+    "frames": 30,
+    "duration": 1,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-zoom-in",
+    "title": "Zoom In",
+    "category": "onboarding",
+    "tags": [
+      "zoom",
+      "in",
+      "magnify"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/zoomIn/zoomIn.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/zoomIn/zoomIn.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 6,
+    "frames": 30,
+    "duration": 1,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
+  },
+  {
+    "id": "ua-zoom-out",
+    "title": "Zoom Out",
+    "category": "onboarding",
+    "tags": [
+      "zoom",
+      "out",
+      "shrink"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/zoomOut/zoomOut.json",
+    "lottieUrl": null,
+    "preview": "https://github.com/useAnimations/react-useanimations/blob/master/src/lib/zoomOut/zoomOut.json",
+    "author": "useAnimations",
+    "source": "github",
+    "license": "CC-BY-4.0",
+    "attributionRequired": true,
+    "sizeKb": 4,
+    "frames": 30,
+    "duration": 1,
+    "dimensions": {
+      "w": 32,
+      "h": 32
+    },
+    "dominantColor": "#000000"
   }
 ]
