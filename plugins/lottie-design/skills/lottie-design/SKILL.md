@@ -5,7 +5,7 @@ description: Search, fetch, and integrate free Lottie animations into React, Rea
 
 # Lottie Design Skill
 
-You help the user find free Lottie animations and embed them in their project with framework-correct code.
+You help the user find free Lottie animations and embed them in their project with framework-correct code. Goal: zero friction — install dep, write component, show code, offer preview, all in one shot.
 
 ## When to use this skill
 
@@ -23,7 +23,7 @@ Do NOT trigger for:
 
 ```
 SKILL.md                       this file
-catalog.json                   curated metadata (id, title, tags, category, jsonUrl, lottieUrl, source, license)
+catalog.json                   curated metadata (id, title, tags, category, jsonUrl, lottieUrl, source, license, author)
 catalog.md                     human-readable category index
 templates/
   react.tsx.template           @lottiefiles/dotlottie-react snippet
@@ -32,7 +32,7 @@ templates/
   vanilla.html.template        @lottiefiles/dotlottie-wc snippet
 scripts/
   extract-url.js               Node: lottiefiles.com page → lottie.host JSON URL
-  generate-preview.js          Node: JSON/lottie URL → standalone preview HTML
+  generate-preview.js          Node: JSON/lottie URL → standalone preview HTML (auto-opens browser)
   fetch-lottie.sh              bash: page URL → download JSON to disk
 docs/
   react.md, react-native.md, flutter.md, vanilla.md, search-strategy.md
@@ -41,79 +41,139 @@ preview-template.html          base HTML for live preview
 
 ## Workflow
 
-### Step 1 — Identify need + framework
+### Step 1 — Detect project context (no questions)
 
-Ask the user (or infer from project files):
-- What animation? ("loading spinner", "success checkmark", "empty cart", "rocket launch")
-- Which framework? Detect from `package.json` (react, react-native), `pubspec.yaml` (flutter), or plain HTML.
-- Size + behavior (autoplay/loop/hover-trigger/once).
+Read these files to infer everything before asking the user anything:
 
-If both are clear from the message, skip the question.
+- `package.json` → framework (`react`, `react-native`), existing Lottie deps
+- `pubspec.yaml` → Flutter project + `lottie` dep
+- `tsconfig.json` or any `.ts*` file → TypeScript or JavaScript
+- `index.html` at root with no `package.json` → Vanilla
+- Existing components in `src/components/animations/`, `src/components/ui/`, `app/components/`, `lib/widgets/` → use the same convention
 
-### Step 2 — Search for animation
+Only ask the user if multiple frameworks are present (monorepo).
+
+### Step 2 — Install dep FIRST (before any code)
+
+**Install the framework dep at the very start of the workflow** — do not wait until the end, do not just suggest the command. Run it immediately if it's missing. Confirm only if the project's lockfile / package manager is ambiguous.
+
+| Framework | Install command | Skip if |
+|---|---|---|
+| React | `npm i @lottiefiles/dotlottie-react` (or `pnpm add` / `yarn add` based on lockfile) | already in `package.json` |
+| React Native | `npm i lottie-react-native` (Expo: `npx expo install lottie-react-native`) | already in `package.json` |
+| Flutter | append `lottie: ^3.3.2` to `pubspec.yaml` deps + run `flutter pub get` | already in `pubspec.yaml` |
+| Vanilla | none — script tag CDN | always |
+
+Detect the package manager:
+- `pnpm-lock.yaml` → `pnpm add`
+- `yarn.lock` → `yarn add`
+- `bun.lockb` → `bun add`
+- `package-lock.json` (or none) → `npm i`
+
+Tell the user one line: `Installing @lottiefiles/dotlottie-react…` then run it. If the install fails, surface the exact error and stop.
+
+### Step 3 — Search for animation
 
 **Search order (stop at first good match):**
 
-1. **Catalog first.** Read `catalog.json`. Filter by `tags` and `category` against the user's keywords. Score matches by tag overlap. If you find ≥1 strong match, surface up to 3 options to the user with `title`, `category`, `preview` page URL.
+1. **Catalog first.** Read `catalog.json`. Filter by `tags`, `title`, and `category` against the user's keywords. Score matches by tag overlap. If you find ≥1 strong match, surface up to 3 options.
 
-2. **Catalog miss → LottieFiles search index.** Use WebFetch on `https://lottiefiles.com/free-animations/<topic>` (e.g. `/loading`, `/success`). The index page returns 200 and lists `/free-animation/<slug>` links. Extract 3–5 candidate slugs.
+2. **Catalog miss → LottieFiles search index.** WebFetch `https://lottiefiles.com/free-animations/<topic>` (e.g. `/loading`, `/success`). The index page returns 200 and lists `/free-animation/<slug>` links. Extract 3–5 candidate slugs.
 
-3. **Resolve direct URL** (best-effort). Run `node scripts/extract-url.js https://lottiefiles.com/free-animation/<slug>`. **Note:** individual animation pages are often gated by Cloudflare and return a challenge. The script detects this and exits with code `6`. When that happens:
-   - Tell the user: "Cloudflare blocked auto-resolve. Open <pageUrl> in a browser, click the **Get URL** button next to the animation, and paste the `lottie.host` URL here."
-   - When they paste the URL, skip directly to Step 4.
+3. **Resolve direct URL** (best-effort). Run `node scripts/extract-url.js https://lottiefiles.com/free-animation/<slug>`. Individual animation pages are often gated by Cloudflare; the script detects this and exits with code `6`. When that happens, tell the user: "Cloudflare blocked auto-resolve. Open `<pageUrl>` in a browser, click **Get URL**, paste the `lottie.host` URL here."
 
-4. **LottieFiles down or CF-blocked → useAnimations fallback.** Use the catalog's `ua-*` entries (already curated). For names not in the catalog, the URL pattern is `https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/<camelCaseName>/<camelCaseName>.json`. License is CC-BY 4.0 (attribution required).
+4. **CF blocked or LF down → useAnimations fallback.** Use catalog's `ua-*` entries. For names not in the catalog, URL pattern is `https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/<camelCaseName>/<camelCaseName>.json`. License is CC-BY 4.0 (attribution required).
 
-Show the user 2–3 options with title + preview link. Wait for their pick unless they said "just pick the best one".
+### Step 4 — Present options
 
-### Step 3 — Resolve direct URL
+Show 2–3 options. **Use AskUserQuestion** when there are clear distinct choices to compare — let the user pick from a UI. Each option label = animation title; description = category + license note. Skip the question and pick the top match if user said "just pick" / "best one" / specific id.
 
-For the chosen animation:
-- If `lottieUrl` (dotLottie) is available, prefer it over `jsonUrl` (smaller, faster).
-- Validate the URL is reachable: `curl -sI <url>` should return 200 and a sensible content-type (`application/json`, `application/zip`, or `application/octet-stream`).
+If the user request is unambiguous (e.g. "react'ime success checkmark ekle, default") → skip the question, pick top catalog match.
 
-### Step 4 — Generate code
+### Step 5 — Verify URL reachability
 
-Read `templates/<framework>.template` and fill placeholders:
+`curl -sI <url>` → must be 200. Prefer dotLottie (`.lottie`) over JSON when both exist.
+
+### Step 6 — Generate code
+
+Read the right template based on framework + TS/JS detection:
+- React + TS → `templates/react.tsx.template` (write as `.tsx`)
+- React + JS → same template, write as `.jsx` and strip the `interface` line + Props type annotation
+- React Native + TS → `templates/react-native.tsx.template` (`.tsx`)
+- React Native + JS → same, strip TS bits, write `.jsx`
+- Flutter → `templates/flutter.dart.template` (`.dart`)
+- Vanilla → `templates/vanilla.html.template` (raw HTML snippet)
+
+**Placeholder fill rules:**
 - `{{src}}` — direct URL (lottie.host preferred)
-- `{{sourceUrl}}` — original lottiefiles.com page (for the license comment)
-- `{{componentName}}` — PascalCase derived from animation title (e.g. `SuccessCheckAnimation`)
-- `{{width}}`, `{{height}}` — default 200, override if user specified
+- `{{sourceUrl}}` — original lottiefiles.com page (for license header)
+- `{{componentName}}` — PascalCase from animation title (e.g. `SuccessCheckAnimation`, `LoadingPulse`)
+- `{{license}}` — entry's `license` field
+- `{{attributionNote}}` — for CC-BY entries: ` (attribution required: see footer credit below)`; for Lottie Simple License: empty string
+- `{{size}}` — user-specified size or default 200
+- `{{author}}` — entry's `author` field (used in attribution string)
 
-Write the rendered code to a sensible path in the user's project. For React/RN, place under `src/components/animations/` or wherever the project's components live (detect via existing structure). For Flutter, under `lib/widgets/`. For vanilla, just print the snippet or write to a standalone HTML file.
+**Path resolution:**
+- Look for an existing animations dir: `src/components/animations/`, `src/components/ui/animations/`, `app/components/animations/`, `lib/widgets/`
+- If none exists, create `src/components/animations/` (React/RN) or `lib/widgets/animations/` (Flutter)
+- Filename = `{{componentName}}.tsx|jsx|dart`
 
-### Step 5 — Dependency check (do NOT auto-install)
+**ALWAYS show the generated code in chat** in a fenced code block right after writing the file. Do not just say "wrote the file." The user must see what landed.
 
-After writing the component, check the project's manifest:
-- React: `package.json` has `@lottiefiles/dotlottie-react`?
-- React Native: `package.json` has `lottie-react-native` ≥7.0?
-- Flutter: `pubspec.yaml` has `lottie:` ≥3.0?
-- Vanilla: no install needed (script tag CDN).
+### Step 7 — Attribution string (if CC-BY)
 
-If missing, **tell the user the install command** but do NOT run it. Example: `npm i @lottiefiles/dotlottie-react`.
+If the chosen entry has `license: "CC-BY-4.0"` (any `ua-*` entry), output a ready-to-paste attribution snippet:
 
-### Step 6 — Optional preview
-
-If the user asks "preview" / "test it" / "show how it looks":
 ```
-node scripts/generate-preview.js <jsonOrLottieUrl> <name>
+Animation "<title>" by <author> (https://useanimations.com), licensed under CC-BY 4.0.
 ```
-This writes `preview-<name>.html` to the cwd. Tell the user to open it in a browser.
+
+Tell the user: "Paste this in your footer / credits / about page. CC-BY requires visible attribution for commercial use."
+
+For `Lottie Simple License`, no attribution string is needed — say so.
+
+### Step 8 — Offer preview
+
+After writing the file, always offer:
+> Preview üreteyim mi? `preview-<componentName>.html` browser'da açılır.
+
+If the user agrees, run `node scripts/generate-preview.js <url> <componentName>`. The script auto-opens the file in the default browser (Windows: `start`, macOS: `open`, Linux: `xdg-open`).
+
+### Step 9 — Final summary
+
+End with a 3-line summary:
+```
+✅ Installed: <package>
+✅ Component: <relative-path>  → <ComponentName />
+✅ License: <license> [+ attribution string if CC-BY]
+```
+
+## Component prop interface (standardized)
+
+All generated components accept a single `size` prop (square — width = height = size) plus optional `className` (web) or `style` (RN/Flutter):
+
+```tsx
+<LoadingPulse size={160} />
+<SuccessCheck size={120} className="mx-auto" />
+```
+
+Default `size` = 200 if not provided. Templates already export this interface.
 
 ## Rules
 
 - **No premium animations.** If a URL contains `/premium/` or the page indicates "Pro" / "Paid", skip it and find a free alternative.
-- **Always include a license comment** at the top of generated files: `// Source: <pageUrl> — Lottie Simple License (commercial use allowed, attribution optional).`
+- **Always include a license header** in generated files. Format: `// Source: <pageUrl> — <license>`
+- **For CC-BY entries always output a separate attribution string** for the user to paste in footer/credits.
 - **Prefer dotLottie over JSON** for production (smaller payload).
 - **Don't inline JSON > 50KB into source files.** Always use a URL or place under a static assets folder.
-- **Don't run npm/yarn/pub install yourself.** Suggest the command and let the user run it.
-- **Don't fabricate `lottie.host` URLs.** If you can't resolve a real URL via the catalog or `extract-url.js`, say so and ask the user to paste a LottieFiles page link.
+- **Auto-install deps** at Step 2 — don't end the workflow with "now run npm i". Run it yourself unless the user explicitly said "don't install".
+- **Don't fabricate `lottie.host` URLs.** Only use URLs verified via catalog or `extract-url.js`.
 - **License copyleft note**: if the user *modifies* an animation, the modified file must retain the Lottie Simple License. Mention this once if the user asks about editing.
 
-## Catalog usage notes
+## Catalog notes
 
-- The catalog is a curated starter set, not exhaustive. ~150 entries across 10 categories.
+- ~48 verified entries across 9 categories (`loader`, `success`, `error`, `empty-state`, `onboarding`, `social-share`, `payment`, `ecommerce`, `character`).
+- 38 entries from useAnimations (CC-BY 4.0, attribution required), 10 from LottieFiles community (Lottie Simple License, no attribution required).
 - If a catalog entry's URL stops working, fall back to web fetch and update the entry inline (edit `catalog.json`).
-- Categories: `loader`, `success`, `error`, `empty-state`, `onboarding`, `social-share`, `payment`, `ecommerce`, `weather`, `character`.
 
-See `docs/search-strategy.md` for detailed matching heuristics, and `docs/<framework>.md` for advanced per-framework usage (controllers, segments, hover triggers, asset bundling).
+See `docs/search-strategy.md` for matching heuristics + i18n keyword map (TR→EN). See `docs/<framework>.md` for advanced per-framework usage (controllers, segments, hover triggers, asset bundling).

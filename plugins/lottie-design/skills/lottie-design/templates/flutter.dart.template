@@ -1,17 +1,14 @@
 // Source: {{sourceUrl}} — {{license}}{{attributionNote}}
-// Add to pubspec.yaml: lottie: ^3.3.2
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 class {{componentName}} extends StatelessWidget {
-  final double width;
-  final double height;
+  final double size;
   final bool repeat;
 
   const {{componentName}}({
     super.key,
-    this.width = {{width}},
-    this.height = {{height}},
+    this.size = {{size}},
     this.repeat = true,
   });
 
@@ -19,8 +16,8 @@ class {{componentName}} extends StatelessWidget {
   Widget build(BuildContext context) {
     return Lottie.network(
       '{{src}}',
-      width: width,
-      height: height,
+      width: size,
+      height: size,
       repeat: repeat,
       fit: BoxFit.contain,
     );

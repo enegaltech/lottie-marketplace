@@ -1,19 +1,19 @@
 // Source: {{sourceUrl}} — {{license}}{{attributionNote}}
-// Install: npm i @lottiefiles/dotlottie-react
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 interface {{componentName}}Props {
+  size?: number;
   className?: string;
 }
 
-export function {{componentName}}({ className }: {{componentName}}Props) {
+export function {{componentName}}({ size = {{size}}, className }: {{componentName}}Props) {
   return (
     <DotLottieReact
       src="{{src}}"
       autoplay
       loop
       className={className}
-      style={{ width: {{width}}, height: {{height}} }}
+      style={{ width: size, height: size }}
     />
   );
 }
