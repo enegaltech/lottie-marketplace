@@ -1,6 +1,6 @@
 <div align="center">
 
-# Enegal Marketplace
+# Enegal Claude Lottie Marketplace
 
 ### The fastest way to ship Lottie animations from Claude Code
 
