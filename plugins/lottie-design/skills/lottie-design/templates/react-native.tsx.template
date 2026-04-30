@@ -1,0 +1,29 @@
+// Source: {{sourceUrl}} — {{license}}{{attributionNote}}
+// Install: npm i lottie-react-native
+import React from 'react';
+import LottieView from 'lottie-react-native';
+import { StyleSheet, ViewStyle } from 'react-native';
+
+interface {{componentName}}Props {
+  style?: ViewStyle;
+}
+
+export function {{componentName}}({ style }: {{componentName}}Props) {
+  return (
+    <LottieView
+      source={{ uri: '{{src}}' }}
+      autoPlay
+      loop
+      style={[styles.lottie, style]}
+    />
+  );
+}
+
+const styles = StyleSheet.create({
+  lottie: {
+    width: {{width}},
+    height: {{height}},
+  },
+});
+
+export default {{componentName}};

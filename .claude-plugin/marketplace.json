@@ -1,0 +1,21 @@
+{
+  "name": "enegal-marketplace",
+  "owner": {
+    "name": "Enegaltech",
+    "email": "info@enegaltech.com",
+    "url": "https://enegaltech.com"
+  },
+  "description": "Design tooling skills for Claude Code — Lottie animations and more.",
+  "plugins": [
+    {
+      "name": "lottie-design",
+      "source": "./plugins/lottie-design",
+      "description": "Search, fetch, and embed free Lottie animations in React, React Native, Flutter, and Vanilla web projects.",
+      "version": "1.0.0",
+      "category": "design",
+      "tags": ["lottie", "animation", "design", "react", "react-native", "flutter"],
+      "license": "MIT",
+      "homepage": "https://enegaltech.com"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+// Source: {{sourceUrl}} — {{license}}{{attributionNote}}
+// Add to pubspec.yaml: lottie: ^3.3.2
+import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
+
+class {{componentName}} extends StatelessWidget {
+  final double width;
+  final double height;
+  final bool repeat;
+
+  const {{componentName}}({
+    super.key,
+    this.width = {{width}},
+    this.height = {{height}},
+    this.repeat = true,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Lottie.network(
+      '{{src}}',
+      width: width,
+      height: height,
+      repeat: repeat,
+      fit: BoxFit.contain,
+    );
+  }
+}

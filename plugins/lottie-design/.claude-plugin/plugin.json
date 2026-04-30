@@ -1,0 +1,13 @@
+{
+  "name": "lottie-design",
+  "version": "1.0.0",
+  "description": "Free Lottie animation skill: search, fetch, embed in React / React Native / Flutter / Vanilla web.",
+  "author": {
+    "name": "Enegaltech",
+    "email": "info@enegaltech.com",
+    "url": "https://enegaltech.com"
+  },
+  "homepage": "https://enegaltech.com",
+  "license": "MIT",
+  "keywords": ["lottie", "dotlottie", "animation", "design", "react", "react-native", "flutter"]
+}

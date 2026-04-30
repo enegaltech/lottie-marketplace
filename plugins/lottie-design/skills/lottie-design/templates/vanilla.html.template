@@ -1,0 +1,10 @@
+<!-- Source: {{sourceUrl}} — {{license}}{{attributionNote}} -->
+<!-- {{componentName}}: drop the script tag once in your <head>, then use the custom element anywhere. -->
+<script src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js" type="module"></script>
+
+<dotlottie-wc
+  src="{{src}}"
+  autoplay
+  loop
+  style="width:{{width}}px;height:{{height}}px;display:inline-block;"
+></dotlottie-wc>
