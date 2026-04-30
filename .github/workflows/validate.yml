@@ -42,7 +42,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: '20' }
+        with: { node-version: '22' }
       - name: generate-preview.js produces valid HTML
         run: |
           set -e
@@ -62,8 +62,10 @@ jobs:
             '{"id":"a","title":"A","src":"https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/loading/loading.json","color":"#000000","duration":5,"frames":150,"sizeKb":6,"license":"CC-BY-4.0"}' \
             '{"id":"b","title":"B","src":"https://raw.githubusercontent.com/useAnimations/react-useanimations/master/src/lib/loading2/loading2.json","color":"#000000","duration":1.53,"frames":46,"sizeKb":17,"license":"CC-BY-4.0"}'
           test -f preview-ci-gallery.html
-          grep -q '"A"' preview-ci-gallery.html
-          grep -q '"B"' preview-ci-gallery.html
+          grep -q 'loading/loading.json' preview-ci-gallery.html
+          grep -q 'loading2/loading2.json' preview-ci-gallery.html
+          grep -q 'class="card-title">A<' preview-ci-gallery.html
+          grep -q 'class="card-title">B<' preview-ci-gallery.html
           echo "gallery generation OK"
 
   url-health:
