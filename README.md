@@ -76,7 +76,7 @@ Claude:
 | 👤 **Character** | Wave/greeting, person animations |
 | 🎵 **Media** | Play/pause, volume, microphone, video |
 
-**48 verified entries** + LottieFiles fallback (thousands more). If the catalog misses, Claude searches LottieFiles live.
+**140 verified entries** across 11 categories + LottieFiles fallback (thousands more). If the catalog misses, Claude searches LottieFiles live.
 
 ---
 
@@ -145,12 +145,12 @@ Package: `@lottiefiles/dotlottie-wc` web component (no build step required)
 
 ## 📚 Catalog
 
-48 verified entries across **two license pools**:
+140 verified entries across **two license pools**:
 
 | Pool | Count | License | Attribution |
 |---|---|---|---|
-| 🟢 **useAnimations** (`ua-*`) | 38 | CC-BY 4.0 | ✅ Required |
-| 🔵 **LottieFiles community** (`lf-*`) | 10 | Lottie Simple License | ⚪ Optional |
+| 🟢 **useAnimations** (`ua-*`) | 79 | CC-BY 4.0 | ✅ Required |
+| 🔵 **LottieFiles community** (`lf-*`) | 61 | Lottie Simple License | ⚪ Optional |
 
 The skill always emits a license header comment in generated code. If you pick a CC-BY entry, it also reminds you to add a visible footer credit.
 
