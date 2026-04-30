@@ -1,0 +1,15 @@
+<!-- Source: {{sourceUrl}} — {{license}}{{attributionNote}} -->
+<script lang="ts">
+  import { DotLottieSvelte } from '@lottiefiles/dotlottie-svelte';
+
+  export let size: number = {{size}};
+  export let className: string = '';
+</script>
+
+<DotLottieSvelte
+  src="{{src}}"
+  autoplay
+  loop
+  class={className}
+  style="width: {size}px; height: {size}px;"
+/>

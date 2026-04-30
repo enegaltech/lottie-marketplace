@@ -1,0 +1,24 @@
+<!-- Source: {{sourceUrl}} — {{license}}{{attributionNote}} -->
+<script setup lang="ts">
+import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
+
+interface Props {
+  size?: number;
+  className?: string;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  size: {{size}},
+  className: '',
+});
+</script>
+
+<template>
+  <DotLottieVue
+    src="{{src}}"
+    autoplay
+    loop
+    :class="props.className"
+    :style="{ width: `${props.size}px`, height: `${props.size}px` }"
+  />
+</template>

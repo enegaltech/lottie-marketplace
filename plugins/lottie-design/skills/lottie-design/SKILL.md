@@ -1,6 +1,6 @@
 ---
 name: lottie-design
-description: Search, fetch, and integrate free Lottie animations into React, React Native, Flutter, and Vanilla web projects. Use when the user asks for any Lottie/dotLottie/animation work — loaders, success checkmarks, splash screens, empty states, onboarding, micro-interactions. Triggers on keywords like "lottie", "dotlottie", ".lottie", "animasyon ekle", "splash animation", "loader animation", "success animation", "empty state animation".
+description: Search, fetch, and integrate free Lottie animations into React, React Native, Vue, Svelte, Angular, Flutter, and Vanilla web projects. Use when the user asks for any Lottie/dotLottie/animation work — loaders, success checkmarks, splash screens, empty states, onboarding, micro-interactions. Triggers on keywords like "lottie", "dotlottie", ".lottie", "animasyon ekle", "splash animation", "loader animation", "success animation", "empty state animation".
 ---
 
 # Lottie Design Skill
@@ -45,13 +45,22 @@ preview-template.html          base HTML for live preview
 
 Read these files to infer everything before asking the user anything:
 
-- `package.json` → framework (`react`, `react-native`), existing Lottie deps
+- `package.json` → check `dependencies` + `devDependencies` for the framework signal:
+  - `react-native` → React Native
+  - `next` (with or without `react`) → Next.js (a React variant — emits same React template, but local-mode default path is `public/animations/`)
+  - `@angular/core` → Angular
+  - `vue` → Vue
+  - `svelte` or `@sveltejs/kit` → Svelte
+  - `react` only → plain React
 - `pubspec.yaml` → Flutter project + `lottie` dep
-- `tsconfig.json` or any `.ts*` file → TypeScript or JavaScript
+- `angular.json` → Angular workspace
+- `svelte.config.js` → SvelteKit
+- `nuxt.config.ts` → Nuxt (Vue variant)
+- `tsconfig.json` or any `.ts*` file → TypeScript; otherwise JavaScript
 - `index.html` at root with no `package.json` → Vanilla
 - Existing components in `src/components/animations/`, `src/components/ui/`, `app/components/`, `lib/widgets/` → use the same convention
 
-Only ask the user if multiple frameworks are present (monorepo).
+Only ask the user if multiple frameworks are present (monorepo) and the request doesn't specify which one.
 
 ### Step 2 — Install dep FIRST (before any code)
 
@@ -59,8 +68,11 @@ Only ask the user if multiple frameworks are present (monorepo).
 
 | Framework | Install command | Skip if |
 |---|---|---|
-| React | `npm i @lottiefiles/dotlottie-react` (or `pnpm add` / `yarn add` based on lockfile) | already in `package.json` |
+| React / Next.js | `npm i @lottiefiles/dotlottie-react` (or `pnpm add` / `yarn add` based on lockfile) | already in `package.json` |
 | React Native | `npm i lottie-react-native` (Expo: `npx expo install lottie-react-native`) | already in `package.json` |
+| Vue / Nuxt | `npm i @lottiefiles/dotlottie-vue` | already in `package.json` |
+| Svelte / SvelteKit | `npm i @lottiefiles/dotlottie-svelte` | already in `package.json` |
+| Angular | `npm i ngx-lottie lottie-web` + register `provideLottieOptions` in app config | already in `package.json` |
 | Flutter | append `lottie: ^3.3.2` to `pubspec.yaml` deps + run `flutter pub get` | already in `pubspec.yaml` |
 | Vanilla | none — script tag CDN | always |
 
@@ -170,10 +182,13 @@ Always tell the user which mode you used and why, in one line at the top of the 
 ### Step 6 — Generate code
 
 Read the right template based on framework + TS/JS detection:
-- React + TS → `templates/react.tsx.template` (write as `.tsx`)
-- React + JS → same template, write as `.jsx` and strip the `interface` line + Props type annotation
+- React / Next + TS → `templates/react.tsx.template` (write as `.tsx`)
+- React / Next + JS → same template, write as `.jsx` and strip the `interface` line + Props type annotation
 - React Native + TS → `templates/react-native.tsx.template` (`.tsx`)
 - React Native + JS → same, strip TS bits, write `.jsx`
+- Vue / Nuxt → `templates/vue.vue.template` (`.vue`)
+- Svelte / SvelteKit → `templates/svelte.svelte.template` (`.svelte`)
+- Angular → `templates/angular.ts.template` (`.component.ts`); also need `kebabName` placeholder (e.g. `loading-pulse`)
 - Flutter → `templates/flutter.dart.template` (`.dart`)
 - Vanilla → `templates/vanilla.html.template` (raw HTML snippet)
 
@@ -196,9 +211,18 @@ Read the right template based on framework + TS/JS detection:
 **React Native, Flutter, Vanilla**: keep using the framework templates as-is. For local mode in those frameworks, swap the URL source for `require(...)` (RN), `Lottie.asset(...)` (Flutter), or relative path (Vanilla).
 
 **Path resolution:**
-- Look for an existing animations dir: `src/components/animations/`, `src/components/ui/animations/`, `app/components/animations/`, `lib/widgets/`
-- If none exists, create `src/components/animations/` (React/RN) or `lib/widgets/animations/` (Flutter)
-- Filename = `{{componentName}}.tsx|jsx|dart`
+- Look for an existing animations dir: `src/components/animations/`, `src/components/ui/animations/`, `app/components/animations/`, `lib/widgets/`, `src/lib/components/animations/` (SvelteKit), `src/app/animations/` (Angular)
+- If none exists, create:
+  - React/RN/Vue/Svelte: `src/components/animations/`
+  - Angular: `src/app/animations/`
+  - Flutter: `lib/widgets/animations/`
+- Filename:
+  - React/RN: `{{componentName}}.tsx` or `.jsx`
+  - Vue: `{{componentName}}.vue`
+  - Svelte: `{{componentName}}.svelte`
+  - Angular: `{{kebabName}}.component.ts`
+  - Flutter: `{{kebabName}}.dart`
+  - Vanilla: print snippet or write to a standalone HTML file
 
 **ALWAYS show the generated code in chat** in a fenced code block right after writing the file. Do not just say "wrote the file." The user must see what landed.
 

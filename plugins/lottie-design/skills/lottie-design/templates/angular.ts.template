@@ -1,0 +1,24 @@
+// Source: {{sourceUrl}} — {{license}}{{attributionNote}}
+import { Component, Input } from '@angular/core';
+import { LottieComponent, AnimationOptions } from 'ngx-lottie';
+
+@Component({
+  selector: 'app-{{kebabName}}',
+  standalone: true,
+  imports: [LottieComponent],
+  template: `
+    <ng-lottie
+      [options]="options"
+      [styles]="{ width: size + 'px', height: size + 'px' }"
+    />
+  `,
+})
+export class {{componentName}}Component {
+  @Input() size = {{size}};
+
+  options: AnimationOptions = {
+    path: '{{src}}',
+    autoplay: true,
+    loop: true,
+  };
+}

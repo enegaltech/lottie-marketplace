@@ -1,10 +1,12 @@
 <div align="center">
 
+<img src="assets/hero.svg" alt="Lottie Design Skill — prompt to component in 30 seconds" width="900"/>
+
 # Enegal Claude Lottie Marketplace
 
 ### The fastest way to ship Lottie animations from Claude Code
 
-**Two commands** to drop free Lottie animations into React, React Native, Flutter, or Vanilla projects.
+**Two commands** to drop free Lottie animations into React, React Native, Vue, Svelte, Angular, Flutter, or Vanilla projects.
 Search, fetch, framework-correct code, live preview — all from inside Claude.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
