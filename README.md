@@ -49,12 +49,13 @@ Done. Now say `"add a loading animation"` and watch it land in your project.
 > "add a checkout success animation"
 
 Claude:
+- 📦 **Auto-installs** `@lottiefiles/dotlottie-react` upfront (detects pnpm/yarn/npm/bun)
 - 🔍 Suggests 3 catalog entries tagged **`success`**
 - 🎯 You pick one — it resolves the direct `lottie.host` URL
-- 📝 Writes a `@lottiefiles/dotlottie-react` component to `src/components/animations/CheckoutSuccess.tsx`
-- 📦 Tells you the missing `npm i` command (does **not** auto-install — your call)
-- ⚖️ Adds a license header comment (commercial OK / attribution required)
-- 🖼️ On request, generates `preview-CheckoutSuccess.html` to test in a browser
+- 📝 Writes a `@lottiefiles/dotlottie-react` component to `src/components/animations/CheckoutSuccess.tsx` (TS or JS, auto-detected)
+- 🧩 Standardized props: `<CheckoutSuccess size={160} />`
+- ⚖️ Adds a license header + a ready-to-paste attribution string for CC-BY entries
+- 🖼️ Offers `preview-CheckoutSuccess.html` and auto-opens it in the default browser
 
 **Total time: 30 seconds.**
 
@@ -163,13 +164,13 @@ The skill always emits a license header comment in generated code. If you pick a
 
 > **You:** "add a loading animation to my React app, blue tones"
 
-Claude suggests 3 spinners from the catalog → you pick one → it writes `src/components/Loader.tsx` → tells you to run `npm i @lottiefiles/dotlottie-react` → optionally generates a preview HTML for browser testing.
+Claude installs `@lottiefiles/dotlottie-react` → suggests 3 spinners from the catalog → you pick one → writes `src/components/animations/Loader.tsx` (or `.jsx` if no TS) with a standardized `size` prop → opens a preview HTML in your browser.
 
 ### Example 2 — Flutter splash screen
 
 > **You:** "I need a rocket lottie for the Flutter splash screen"
 
-Claude resolves `lf-onboarding-rocket` → writes `lib/widgets/splash_animation.dart` → tells you to add `lottie: ^3.3.2` to `pubspec.yaml`.
+Claude appends `lottie: ^3.3.2` to `pubspec.yaml` and runs `flutter pub get` → resolves `lf-onboarding-rocket` → writes `lib/widgets/splash_animation.dart` with `<RocketSplash size={240} />`.
 
 ### Example 3 — Vanilla 404 page
 
