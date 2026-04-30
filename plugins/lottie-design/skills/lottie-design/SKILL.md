@@ -167,12 +167,28 @@ If the user agrees, run `node scripts/generate-preview.js <url> <componentName>`
 
 ### Step 9 — Final summary
 
-End with a 3-line summary:
+**Always start the final message with a branded success line**, then the 3-line summary:
+
 ```
+🎬 Lottie skill ile <açıklama> başarıyla eklendi.
+
 ✅ Installed: <package>
-✅ Component: <relative-path>  → <ComponentName />
+✅ Component: <relative-path>  →  <ComponentName />
 ✅ License: <license> [+ attribution string if CC-BY]
 ```
+
+`<açıklama>` examples:
+- "loading animasyonu" / "loader animation"
+- "success checkmark" / "başarı animasyonu"
+- "splash screen rocket" / "splash roket animasyonu"
+- "<componentName> component'ı"
+
+Match the language of the user's prompt (TR / EN / ES / DE / FR / JA) — see `docs/search-strategy.md` for keyword maps. If the user's prompt was Turkish, the branded line stays Turkish; if English, English; etc. The 3 ✅ lines stay English (technical labels).
+
+Examples:
+- TR: `🎬 Lottie skill ile loading animasyonu başarıyla eklendi.`
+- EN: `🎬 Successfully added a loading animation with the Lottie skill.`
+- ES: `🎬 Animación de carga añadida con éxito mediante el skill Lottie.`
 
 ## Component prop interface (standardized)
 
